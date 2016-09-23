@@ -5,9 +5,21 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\NetTestSprite</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\NetworkingTest.gml</script>
+    <script>scripts\HandleNetTest1Response.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\NetworkTester</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\NetTestRoom</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
