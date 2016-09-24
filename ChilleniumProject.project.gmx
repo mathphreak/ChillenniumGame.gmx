@@ -16,6 +16,10 @@
     <script>scripts\HandleNetworkResponse.gml</script>
     <script>scripts\CreateGame.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_title</font>
+    <font>fonts\fnt_menus</font>
+  </fonts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
     <object>objects\NetworkTester</object>
@@ -25,8 +29,11 @@
     <object>objects\room3_data</object>
     <object>objects\room4_data</object>
     <object>objects\room5_data</object>
+    <object>objects\obj_game_start</object>
+    <object>objects\obj_mainMenu</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
   </rooms>
   <help>
