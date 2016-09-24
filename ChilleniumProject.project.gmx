@@ -13,6 +13,7 @@
     <sprite>sprites\NetTestSprite</sprite>
     <sprite>sprites\spr_test_player</sprite>
     <sprite>sprites\spr_warning</sprite>
+    <sprite>sprites\spr_player</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
