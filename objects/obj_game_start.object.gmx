@@ -31,7 +31,7 @@ for(var m=0; m&lt;9; m+=1)
     ds_grid_set(global.eventsGrid,0,m,0);
 }
 ini_open("events.ini");
-ini_write_string("savedata","grid",ds_grid_write(global.eventsGrid));
+ini_write_string("savedata","grid",string(0));
 if(!ini_section_exists("warntext"))
 {
     ini_write_string("warntext","0","WARNING: IT IS 2:30PM");
@@ -97,6 +97,7 @@ if(!ini_section_exists("c4")) //good option
     ini_write_string("c4","8","Set most of ship AC to comfortable");
     ini_write_string("c4","9","Check your calendar");
 }
+instance_destroy();
 </string>
           </argument>
         </arguments>
