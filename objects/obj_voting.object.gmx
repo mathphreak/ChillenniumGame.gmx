@@ -32,9 +32,6 @@ vote3_count = 0;
 vote4_count = 0;
 vote5_count = 0;
 
-if LOADING {
-    net_createGame();
-} else {
     net_offerChoice(
         'Choose A Letter:',
         'A',
@@ -48,7 +45,6 @@ if LOADING {
         '',
         ''
     );
-}
 
 </string>
           </argument>
