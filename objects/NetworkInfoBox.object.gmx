@@ -166,11 +166,17 @@ var players = net_getPlayers();
 if players[0,0] != '' {
     for (var i = 0; i &lt; array_height_2d(players); i++) {
         // id
-        draw_text(212, 35 + 25 * i, players[i,0]);
+        // draw_text(212, 35 + 25 * i, players[i,0]);
         // name
         draw_text(512, 35 + 25 * i, players[i,1]);
         // ready
-        draw_text(912, 35 + 25 * i, players[i,2]);
+        var ready;
+        if (players[i, 2] == 1) {
+            ready = "Y";
+        } else {
+            ready = "N";
+        }
+        draw_text(912, 35 + 25 * i, ready);
     }
 }
 
