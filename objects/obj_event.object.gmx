@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>randomize();
-index = irandom(14);
+index = irandom(19);
 while((ds_grid_get(global.eventsGrid,0,index)) != 0)
 {
-    index = irandom(14);
+    index = irandom(19);
 }
 ini_open("events.ini");
 event_text = ini_read_string("choicetext",string(index),"");

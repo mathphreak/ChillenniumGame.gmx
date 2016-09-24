@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.eventsGrid = ds_grid_create(1,14);
-for(var m=0; m&lt;14; m+=1)
+            <string>global.eventsGrid = ds_grid_create(1,19);
+for(var m=0; m&lt;19; m+=1)
 {
     ds_grid_set(global.eventsGrid,0,m,0);
 }
@@ -49,6 +49,11 @@ if(!ini_section_exists("warntext"))
     ini_write_string("warntext","12","WARNING: LIGHTBULB FLICKERING OCCASIONALLY");
     ini_write_string("warntext","13","WARNING: COMPUTER A BIT SLOW");
     ini_write_string("warntext","14","WARNING: CAT VIDEO WILL NOT LOAD");
+    ini_write_string("warntext","15","WARNING: GAME JAM THEME OBSCURE");
+    ini_write_string("warntext","16","WARNING: NEW PHONE HAS NO HEADPHONE JACK");
+    ini_write_string("warntext","17","WARNING: CREWMEMBER COULD NOT SLEEP");
+    ini_write_string("warntext","18","WARNING: NOT ENOUGH DIP FOR REMAINING CHIPS");
+    ini_write_string("warntext","19","WARNING: SOMEONE FARTED");
 }
 if(!ini_section_exists("c1")) //Jester option
 {
@@ -67,6 +72,11 @@ if(!ini_section_exists("c1")) //Jester option
     ini_write_string("c1","12","There's a joke in there somewhere");
     ini_write_string("c1","13","Hit it");
     ini_write_string("c1","14","Try again later");
+    ini_write_string("c1","15","Pretend you know what it means");
+    ini_write_string("c1","16","Deal with no aux cord");
+    ini_write_string("c1","17","Apply caffiene");
+    ini_write_string("c1","18","Open another dip");
+    ini_write_string("c1","19","Blame crew member");
 }
 if(!ini_section_exists("c2")) //Specialist option
 {
@@ -85,6 +95,11 @@ if(!ini_section_exists("c2")) //Specialist option
     ini_write_string("c2","12","Screw the bulb in slightly tighter");
     ini_write_string("c2","13","Check for virus");
     ini_write_string("c2","14","Check router");
+    ini_write_string("c2","15","Actually know what it means");
+    ini_write_string("c2","16","Use wireless systems");
+    ini_write_string("c2","17","Don't worry about it");
+    ini_write_string("c2","18","Use less dip per chip");
+    ini_write_string("c2","19","It's perfectly natural");
 }
 if(!ini_section_exists("c3")) //does nothing
 {
@@ -103,6 +118,11 @@ if(!ini_section_exists("c3")) //does nothing
     ini_write_string("c3","12","Wait until flickering more");
     ini_write_string("c3","13","Have AI deal with it");
     ini_write_string("c3","14","Wait for video to buffer");
+    ini_write_string("c3","15","Ask for help");
+    ini_write_string("c3","16","Use the speakers");
+    ini_write_string("c3","17","Have everyone rest");
+    ini_write_string("c3","18","Leave remaining chips for next time");
+    ini_write_string("c3","19","Move to different rooms");
 }
 if(!ini_section_exists("c4")) //good option
 {
@@ -121,6 +141,11 @@ if(!ini_section_exists("c4")) //good option
     ini_write_string("c4","12","Replace bulb");
     ini_write_string("c4","13","Try turning it off and on again");
     ini_write_string("c4","14","Troubleshoot wifi");
+    ini_write_string("c4","15","Google it");
+    ini_write_string("c4","16","Get phone with headphone jack");
+    ini_write_string("c4","17","Have other crew take more work");
+    ini_write_string("c4","18","Use remaining chips during next meal");
+    ini_write_string("c4","19","Laugh heartily");
 }
 ini_close();
 instance_destroy();
