@@ -25,14 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize ship st
+            <string>//Initialize room stats
+//Room name: ???
 
-global.ship_health = 3000
-
-
-
-
-
+global.room3_health = 200
 </string>
           </argument>
         </arguments>
