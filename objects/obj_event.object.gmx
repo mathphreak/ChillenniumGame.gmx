@@ -28,6 +28,11 @@
             <string>randomize();
 index = irandom(1) + 1;
 ini_open("events.ini");
+while(ini_read_real("complete",string(index),1) == 1)
+{
+    randomize();
+    index = irandom(1) + 1;
+}
 ini_write_real("complete",string(index),1);
 ini_close();
 </string>
@@ -64,11 +69,6 @@ draw_text(10,70,str);
 str = ini_read_string("choice4",string(index),"fail");
 draw_text(10,90,str);
 obj_create = false;
-
-if(ini_read_real("complete",string(index),1) == 1)
-{
-    draw_text(10,110,"pass");
-}
 ini_close();
 </string>
           </argument>
