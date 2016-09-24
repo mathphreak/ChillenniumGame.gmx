@@ -39,7 +39,7 @@ if(!ini_section_exists("warntext"))
     ini_write_string("warntext","2","WARNING: SHIP IMPACTED WITH SMALL ROCK");
     ini_write_string("warntext","3","WARNING: ALL BANANAS ON THE SHIP HAVE BECOME SLIGHTLY BROWN");
     ini_write_string("warntext","4","WARNING: SHIP FUEL AT 99 PERCENT CAPACITY");
-    ini_write_string("warntext","5","WARNING: POWER LEVELS UNDER 9000");
+    ini_write_string("warntext","5","WARNING: POWER LEVELS UNDER 9000!!!");
     ini_write_string("warntext","6","WARNING: YOU WANT TO BE THE VERY BEST LIKE NO ONE EVER WAS");
     ini_write_string("warntext","7","WARNING: NO LONGER IN GALAXY FAR FAR AWAY");
     ini_write_string("warntext","8","WARNING: AIR CONDITIONING SLIGHTLY COLDER THAN COMFORTABLE");
@@ -71,13 +71,31 @@ if(!ini_section_exists("c2")) //Specialist option
     ini_write_string("c2","8","Check for open doors");
     ini_write_string("c2","9","Check AI programming");
 }
-if(!ini_section_exists("c3"))
+if(!ini_section_exists("c3")) //does nothing
 {
-    //write shit here
+    ini_write_string("c3","0","Ignore the warning");
+    ini_write_string("c3","1","Clean it up");
+    ini_write_string("c3","2","Who cares?");
+    ini_write_string("c3","3","Throw them out");
+    ini_write_string("c3","4","Fill up when it's low");
+    ini_write_string("c3","5","That seems like a lot");
+    ini_write_string("c3","6","Spray repel");
+    ini_write_string("c3","7","Didn't we want to get home?");
+    ini_write_string("c3","8","Put on a jacket");
+    ini_write_string("c3","9","Why would you tell us that?");
 }
-if(!ini_section_exists("c4"))
+if(!ini_section_exists("c4")) //good option
 {
-    //write shit here
+    ini_write_string("c4","0","Check your schedule");
+    ini_write_string("c4","1","Get a Sham-Wow(TM)");
+    ini_write_string("c4","2","Get dent insurance");
+    ini_write_string("c4","3","Eat one banana and throw the rest out");
+    ini_write_string("c4","4","Stop at next fuel station");
+    ini_write_string("c4","5","At least it's still over 8000");
+    ini_write_string("c4","6","Pick your starter");
+    ini_write_string("c4","7","Don't talk about midichlorians");
+    ini_write_string("c4","8","Set most of ship AC to comfortable");
+    ini_write_string("c4","9","Check your calendar");
 }
 </string>
           </argument>
