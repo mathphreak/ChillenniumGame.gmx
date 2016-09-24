@@ -25,20 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Event code
-
-randomize()
-index = 0;
-event_count = 2;
-ini_open("events.ini")
-
-while (index &lt; event_count){
-    ini_write_real("complete", index, 0)
-    index += 1
-    }
-    
-    
-instance_destroy()
+            <string>global.eventsGrid = ds_grid_create(1,2);
+for(var m=0; m&lt;2; m+=1)
+{
+    ds_grid_set(global.eventsGrid,0,m,0);
+}
 </string>
           </argument>
         </arguments>
