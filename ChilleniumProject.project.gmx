@@ -36,6 +36,7 @@
     <script>scripts\HandleNetworkResponse.gml</script>
     <script>scripts\net_createGame.gml</script>
     <script>scripts\net_getPlayers.gml</script>
+    <script>scripts\net_markPlayerAsSpecial.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
