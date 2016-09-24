@@ -3,5 +3,5 @@
 var specialPlayerID = argument0;
 var ADDR = net_GET_HOST_ADDR();
 
-http_post_string(ADDR + '/game/' + SHORTCODE + '/players/' + specialPlayerID, '{"special": true}');
+http_post_string(ADDR + '/game/' + SHORTCODE + '/players/' + specialPlayerID, 'special=true');
 
