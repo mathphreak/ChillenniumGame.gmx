@@ -23,7 +23,9 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_warning</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
@@ -50,6 +52,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
     <font>fonts\fnt_menus</font>
+    <font>fonts\fnt_warning</font>
   </fonts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
