@@ -28,6 +28,11 @@
             <string>LOADING = true;
 r_str = "Click the squiggle to create the game";
 alarm[0] = 60;
+// IMPORTANT:
+// Player = [ID, Name, Ready]
+players[0,0] = '';
+players[0,1] = '';
+players[0,2] = false;
 
 </string>
           </argument>
@@ -157,6 +162,17 @@ alarm[0] = 60;
           <argument>
             <kind>1</kind>
             <string>draw_text(512, 10, r_str);
+var players = net_getPlayers();
+if players[0,0] != '' {
+    for (var i = 0; i &lt; array_height_2d(players); i++) {
+        // id
+        draw_text(212, 35 + 25 * i, players[i,0]);
+        // name
+        draw_text(512, 35 + 25 * i, players[i,1]);
+        // ready
+        draw_text(912, 35 + 25 * i, players[i,2]);
+    }
+}
 
 </string>
           </argument>
