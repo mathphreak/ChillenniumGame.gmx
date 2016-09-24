@@ -153,6 +153,7 @@ if(net_allPlayersReady()) &amp;&amp; action_selected &amp;&amp; choice_propagate
     if(winningIndex &gt; -1){
         net_setStateWaiting();
     }
+    instance_create(x,y,obj_voteTrans);
 }
         
 
@@ -178,9 +179,7 @@ if(net_allPlayersReady()) &amp;&amp; action_selected &amp;&amp; choice_propagate
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-    
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

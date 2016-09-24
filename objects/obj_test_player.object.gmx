@@ -53,7 +53,10 @@ is_voting = true;
           <argument>
             <kind>1</kind>
             <string>image_angle = direction;
-gotoLocation = obj_event.location;
+if(is_voting)
+{
+    gotoLocation = obj_event.location;
+}
 if(currentLocation != gotoLocation)
 {
     if(gotoLocation == 1)

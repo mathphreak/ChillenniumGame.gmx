@@ -63,6 +63,7 @@
     <object>objects\obj_test_player</object>
     <object>objects\obj_cont_game</object>
     <object>objects\obj_about</object>
+    <object>objects\obj_voteTrans</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
