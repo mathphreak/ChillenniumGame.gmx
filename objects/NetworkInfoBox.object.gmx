@@ -56,7 +56,7 @@ players[0,2] = false;
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>FetchStatus</script>
+            <script>net_fetchStatus</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -119,7 +119,7 @@ players[0,2] = false;
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>HandleNetworkResponse</script>
+            <script>net_HANDLE_RESPONSE</script>
           </argument>
           <argument>
             <kind>0</kind>

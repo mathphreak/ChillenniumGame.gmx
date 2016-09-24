@@ -31,9 +31,9 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\net_getHostAddr.gml</script>
-    <script>scripts\FetchStatus.gml</script>
-    <script>scripts\HandleNetworkResponse.gml</script>
+    <script>scripts\net_GET_HOST_ADDR.gml</script>
+    <script>scripts\net_HANDLE_RESPONSE.gml</script>
+    <script>scripts\net_fetchStatus.gml</script>
     <script>scripts\net_createGame.gml</script>
     <script>scripts\net_getPlayers.gml</script>
     <script>scripts\net_markPlayerAsSpecial.gml</script>
