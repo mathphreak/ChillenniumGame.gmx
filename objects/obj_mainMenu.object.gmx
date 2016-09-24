@@ -8,36 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Player clicks new game
-if (point_in_rectangle(mouse_x, mouse_y, 380, 580, 520, 625)){
-    if(mouse_check_button_pressed(mb_left)){
-        room_goto(NetTestRoom)
-        instance_destroy();
-    }
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -63,7 +33,39 @@ draw_text(room_width/2, room_height/4, "EWW#(Everything Went Wrong)");
 
 //Draw menu stuff
 draw_set_font(fnt_menus)
-draw_text(room_width/2, room_height*.667, "New Game");
+draw_text(room_width/2, room_height*.59, "New Game");
+draw_text(room_width/2, room_height*.667, "Continue Game");
+draw_text(room_width/2, room_height*.75, "About");
+//draw_rectangle(375,515,520,550, true);
+//draw_rectangle(350,585,550,620, true);
+//draw_rectangle(395,660,505,690, true);
+
+
+
+//Player clicks new game
+if (point_in_rectangle(mouse_x, mouse_y, 375,515,520,550)){
+    if(mouse_check_button_pressed(mb_left)){
+        room_goto(NetTestRoom)
+        instance_destroy();
+    }
+}
+
+//Player clicks continue
+if (point_in_rectangle(mouse_x, mouse_y, 350,585,550,620)){
+    if(mouse_check_button_pressed(mb_left)){
+        //TODO: put stuff hurr
+        instance_destroy();
+    }
+}
+
+//Player clicks about
+if (point_in_rectangle(mouse_x, mouse_y, 395,660,505,690)){
+    if(mouse_check_button_pressed(mb_left)){
+        //TODO: put stuff hurr
+        instance_destroy();
+    }
+}
+
 
 </string>
           </argument>
