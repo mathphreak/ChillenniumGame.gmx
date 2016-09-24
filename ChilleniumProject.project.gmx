@@ -30,6 +30,7 @@
     <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
     <sprite>sprites\spr_test_player</sprite>
+    <sprite>sprites\spr_warning</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
