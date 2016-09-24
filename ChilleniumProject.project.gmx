@@ -51,10 +51,12 @@
     <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_event</object>
+    <object>objects\obj_voting</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
+    <room>rooms\rm_voteTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
