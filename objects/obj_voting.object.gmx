@@ -56,6 +56,20 @@ vote5_count = 0;
             <kind>1</kind>
             <string>//Which vote won
 //This code done gone elsewhere
+//Actual Voting
+net_offerChoice(
+    'What do you want to do?',
+    obj_event.c1_text,
+    obj_event.c1_text,
+    obj_event.c2_text,
+    obj_event.c2_text,
+    obj_event.c3_text,
+    obj_event.c3_text,
+    obj_event.c4_text,
+    obj_event.c4_text,
+    '',
+    '',
+)
 
 //Done voting
 
