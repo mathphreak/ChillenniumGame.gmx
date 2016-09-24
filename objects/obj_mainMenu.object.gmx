@@ -28,7 +28,7 @@
             <string>//Player clicks new game
 if (point_in_rectangle(mouse_x, mouse_y, 447, 495, 575, 535)){
     if(mouse_check_button_pressed(mb_left)){
-        room_goto(rm_voteTest)
+        room_goto(NetTestRoom)
         instance_destroy();
     }
 }

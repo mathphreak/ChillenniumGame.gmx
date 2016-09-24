@@ -56,7 +56,6 @@
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
-    <room>rooms\rm_voteTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
