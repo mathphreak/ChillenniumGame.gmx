@@ -262,6 +262,29 @@ if(!ini_section_exists("a4")) //AI response choice 4
     ini_write_string("a4","18","Gotta love nachos");
     ini_write_string("a4","19","If it's a joke no one really cares");
 }
+if(!ini_section_exists("location"))
+{
+    ini_write_real("location","0",0);
+    ini_write_real("location","1",0);
+    ini_write_real("location","2",0);
+    ini_write_real("location","3",0);
+    ini_write_real("location","4",0);
+    ini_write_real("location","5",0);
+    ini_write_real("location","6",0);
+    ini_write_real("location","7",0);
+    ini_write_real("location","8",0);
+    ini_write_real("location","9",0);
+    ini_write_real("location","10",0);
+    ini_write_real("location","11",0);
+    ini_write_real("location","12",0);
+    ini_write_real("location","13",0);
+    ini_write_real("location","14",0);
+    ini_write_real("location","15",0);
+    ini_write_real("location","16",0);
+    ini_write_real("location","17",0);
+    ini_write_real("location","18",0);
+    ini_write_real("location","19",0);
+}
 ini_close();
 instance_destroy();
 </string>

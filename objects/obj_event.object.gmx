@@ -38,9 +38,29 @@ c1_text = ini_read_string("c1",string(index),"");
 c2_text = ini_read_string("c2",string(index),"");
 c3_text = ini_read_string("c3",string(index),"");
 c4_text = ini_read_string("c4",string(index),"");
+location = ini_read_real("location",string(index),0);
 ini_close();
 ds_grid_set(global.eventsGrid,0,index,1);
-instance_create(room_width/2,room_height/2,obj_warning);
+switch(location)
+{
+    case 0:
+        instance_create(room_width/2 + 8,room_height/2 - 270,obj_warning);
+        break;
+    case 1:
+        instance_create(room_width/2,room_height/2,obj_warning);
+        break;
+    case 2:
+        instance_create(room_width/2,room_height/2,obj_warning);
+        break;
+    case 3:
+        instance_create(room_width/2,room_height/2,obj_warning);
+        break;
+    case 4:
+        instance_create(room_width/2,room_height/2,obj_warning);
+        break;
+    default:
+        instance_create(room_width/2,room_height/2,obj_warning);
+}
 </string>
           </argument>
         </arguments>
