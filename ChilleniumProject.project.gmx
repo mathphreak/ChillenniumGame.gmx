@@ -50,6 +50,8 @@
     <script>scripts\net_getPlayers.gml</script>
     <script>scripts\net_markPlayerAsSpecial.gml</script>
     <script>scripts\net_setStateWaiting.gml</script>
+    <script>scripts\net_offerChoice.gml</script>
+    <script>scripts\net_allPlayersReady.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
