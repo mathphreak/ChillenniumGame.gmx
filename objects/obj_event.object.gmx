@@ -32,7 +32,6 @@ while((ds_grid_get(global.eventsGrid,0,index)) != 0)
     index = irandom(19);
 }
 ini_open("events.ini");
-event_text = ini_read_string("choicetext",string(index),"");
 warning = ini_read_string("warntext",string(index),"");
 c1_text = ini_read_string("c1",string(index),"");
 c2_text = ini_read_string("c2",string(index),"");
