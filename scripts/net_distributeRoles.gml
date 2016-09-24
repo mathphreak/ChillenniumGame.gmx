@@ -1,10 +1,10 @@
 var players = net_getPlayers();
 var roles;
-roles[0] = 'benign';
-roles[1] = 'inept';
-roles[2] = 'sneaky';
-roles[3] = 'competent';
-roles[4] = 'smug';
+roles[0] = 'engineer';
+roles[1] = 'scientist';
+roles[2] = 'sabateur';
+roles[3] = 'pilot';
+roles[4] = 'medic';
 for (var i = 0; i < array_height_2d(players); i++) {
     var j = irandom(i);
     if j != i {

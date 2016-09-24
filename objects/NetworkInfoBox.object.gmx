@@ -164,7 +164,7 @@ trust_ready = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(512, 10, r_str);
+            <string>draw_text(512, 30, r_str);
 var players = net_getPlayers();
 if room == rm_lobby &amp;&amp; players[0,0] != '' {
     for (var i = 0; i &lt; array_height_2d(players); i++) {

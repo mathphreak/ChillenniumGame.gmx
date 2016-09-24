@@ -54,6 +54,7 @@
     <instance objName="obj_player_1" x="640" y="416" name="inst_127A6ACD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_start" x="96" y="288" name="inst_6022FE83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event" x="128" y="384" name="inst_05735111" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shipData" x="64" y="128" name="inst_12377788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
