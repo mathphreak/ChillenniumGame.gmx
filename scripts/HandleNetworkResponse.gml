@@ -12,6 +12,7 @@ if ds_map_find_value(async_load, "status") == 0 {
      r_str = "Join at " + JOIN_URL + " (" + ready + " ready)";
      LOADING = false;
    }
+   ds_map_destroy(json);
 } else {
    r_str = "null";
 }
