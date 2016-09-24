@@ -265,24 +265,24 @@ if(!ini_section_exists("a4")) //AI response choice 4
 if(!ini_section_exists("location"))
 {
     ini_write_real("location","0",1);
-    ini_write_real("location","1",1);
-    ini_write_real("location","2",1);
-    ini_write_real("location","3",1);
-    ini_write_real("location","4",1);
-    ini_write_real("location","5",1);
-    ini_write_real("location","6",1);
+    ini_write_real("location","1",3);
+    ini_write_real("location","2",4);
+    ini_write_real("location","3",3);
+    ini_write_real("location","4",4);
+    ini_write_real("location","5",4);
+    ini_write_real("location","6",5);
     ini_write_real("location","7",1);
     ini_write_real("location","8",1);
-    ini_write_real("location","9",1);
+    ini_write_real("location","9",5);
     ini_write_real("location","10",1);
-    ini_write_real("location","11",1);
-    ini_write_real("location","12",1);
+    ini_write_real("location","11",3);
+    ini_write_real("location","12",2);
     ini_write_real("location","13",1);
     ini_write_real("location","14",1);
-    ini_write_real("location","15",1);
+    ini_write_real("location","15",2);
     ini_write_real("location","16",1);
-    ini_write_real("location","17",1);
-    ini_write_real("location","18",1);
+    ini_write_real("location","17",2);
+    ini_write_real("location","18",3);
     ini_write_real("location","19",1);
 }
 ini_close();
