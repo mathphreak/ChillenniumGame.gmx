@@ -20,6 +20,7 @@ if ds_map_find_value(async_load, "status") == 0 {
                 players[n,0] = ds_map_find_value(map, "_id");
                 players[n,1] = ds_map_find_value(map, "name");
                 players[n,2] = ds_map_find_value(map, "ready");
+                players[n,3] = ds_map_find_value(map, "chosenIndex");
                 curr = ds_map_find_next(map, curr);
             }
             ds_map_destroy(map);

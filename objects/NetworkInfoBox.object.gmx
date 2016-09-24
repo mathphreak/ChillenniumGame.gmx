@@ -29,10 +29,11 @@
 r_str = "Click the squiggle to create the game";
 alarm[0] = 60;
 // IMPORTANT:
-// Player = [ID, Name, Ready]
+// Player = [ID, Name, Ready, Selection]
 players[0,0] = '';
 players[0,1] = '';
 players[0,2] = false;
+players[0,3] = 0;
 
 </string>
           </argument>
