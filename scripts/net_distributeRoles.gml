@@ -2,7 +2,7 @@ var players = net_getPlayers();
 var roles;
 roles[0] = 'engineer';
 roles[1] = 'scientist';
-roles[2] = 'sabateur';
+roles[2] = 'saboteur';
 roles[3] = 'pilot';
 roles[4] = 'medic';
 for (var i = 0; i < array_height_2d(players); i++) {

@@ -171,7 +171,7 @@ if room == rm_lobby &amp;&amp; players[0,0] != '' {
         // id
         // draw_text(212, 35 + 25 * i, players[i,0]);
         // name
-        draw_text(room_width / 2, 35 + 25 * i, players[i,1]);
+        draw_text(room_width / 2, 70 + 25 * i, players[i,1]);
         // ready
         var ready;
         if (players[i, 2] == 1) {
@@ -179,7 +179,7 @@ if room == rm_lobby &amp;&amp; players[0,0] != '' {
         } else {
             ready = "N";
         }
-        draw_text(room_width / 2 + room_width / 3, 35 + 25 * i, ready);
+        draw_text(room_width / 2 + room_width / 3, 70 + 25 * i, ready);
     }
 }
 
