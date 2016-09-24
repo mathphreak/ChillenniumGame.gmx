@@ -312,7 +312,7 @@ if(currentLocation != gotoLocation)
     }
 }
 else{
-    instance_create(x,y,obj_voting)
+    instance_create(x+5,y+5,obj_voting)
 }
 
 </string>

@@ -32,6 +32,24 @@ vote3_count = 0;
 vote4_count = 0;
 vote5_count = 0;
 
+if LOADING {
+    net_createGame();
+} else {
+    net_offerChoice(
+        'Choose A Letter:',
+        'A',
+        'A for special people',
+        'B',
+        'B if you are cool',
+        'C',
+        'C is for Crap',
+        'D',
+        'Damn straight',
+        '',
+        ''
+    );
+}
+
 </string>
           </argument>
         </arguments>
@@ -57,19 +75,7 @@ vote5_count = 0;
             <string>//Which vote won
 //This code done gone elsewhere
 //Actual Voting
-net_offerChoice(
-    'What do you want to do?',
-    obj_event.c1_text,
-    obj_event.c1_text,
-    obj_event.c2_text,
-    obj_event.c2_text,
-    obj_event.c3_text,
-    obj_event.c3_text,
-    obj_event.c4_text,
-    obj_event.c4_text,
-    '',
-    '',
-)
+
 
 //Done voting
 
