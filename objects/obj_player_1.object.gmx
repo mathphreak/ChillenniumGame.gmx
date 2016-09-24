@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>currentLocation = 3;
+is_voting = true;
 </string>
           </argument>
         </arguments>
