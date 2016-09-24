@@ -1,0 +1,4 @@
+with NetworkInfoBox {
+    return players;
+}
+

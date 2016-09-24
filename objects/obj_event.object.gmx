@@ -31,6 +31,22 @@ while((ds_grid_get(global.eventsGrid,0,index)) != 0)
 {
     index = irandom(1);
 }
+ini_open("events.ini");
+event_text = ini_read_string("choicetext",string(index),"");
+warning = ini_read_string("warntext",string(index),"");
+c1_text = ini_read_string("c1",string(index),"");
+c2_text = ini_read_string("c2",string(index),"");
+c3_text = ini_read_string("c3",string(index),"");
+c4_text = ini_read_string("c4",string(index),"");
+ini_close();
+ds_grid_set(global.eventsGrid,0,index,1);
+instance_create(room_width/2,room_height/2,obj_warning);
+//insert warning font
+//draw warning
+//warning sound
+//end warning sound
+//stop drawing warning
+//insert old font
 </string>
           </argument>
         </arguments>

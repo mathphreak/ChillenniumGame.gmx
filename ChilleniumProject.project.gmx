@@ -31,9 +31,11 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\net_getHostAddr.gml</script>
     <script>scripts\FetchStatus.gml</script>
     <script>scripts\HandleNetworkResponse.gml</script>
-    <script>scripts\CreateGame.gml</script>
+    <script>scripts\net_createGame.gml</script>
+    <script>scripts\net_getPlayers.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
@@ -51,6 +53,8 @@
     <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_event</object>
+    <object>objects\obj_warning</object>
+    <object>objects\obj_voting</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
