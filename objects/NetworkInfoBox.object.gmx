@@ -156,7 +156,7 @@ alarm[0] = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 20, r_str);
+            <string>draw_text(512, 10, r_str);
 
 </string>
           </argument>
