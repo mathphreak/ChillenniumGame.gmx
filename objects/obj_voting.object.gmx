@@ -32,19 +32,19 @@ vote3_count = 0;
 vote4_count = 0;
 vote5_count = 0;
 
-    net_offerChoice(
-        'Choose A Letter:',
-        'A',
-        'A for special people',
-        'B',
-        'B if you are cool',
-        'C',
-        'C is for Crap',
-        'D',
-        'Damn straight',
-        '',
-        ''
-    );
+net_offerChoice(
+    'What do you want to do?',
+    obj_event.c1_text,
+    obj_event.c1_text + " sabatoge",
+    obj_event.c2_text,
+    obj_event.c2_text + " specialist",
+    obj_event.c3_text,
+    obj_event.c3_text + " nothing",
+    obj_event.c4_text,
+    obj_event.c4_text + " benefit",
+    '',
+    ''
+);
 
 </string>
           </argument>
@@ -78,6 +78,12 @@ vote5_count = 0;
 if(net_allPlayersReady()){
     var winningIndex = net_getWinningChoice();
     if (winningIndex == 0) {
+    }
+    if (winningIndex == 1) {
+    }
+    if (winningIndex == 2) {
+    }
+    if (winningIndex == 3) {
     }
     if(winningIndex &gt; -1){
         net_setStateWaiting();

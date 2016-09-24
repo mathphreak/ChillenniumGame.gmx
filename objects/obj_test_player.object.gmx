@@ -29,6 +29,7 @@
 
 image_index = irandom(4);
 image_speed = 0;
+is_voting = true;
 </string>
           </argument>
         </arguments>
@@ -314,8 +315,9 @@ if(currentLocation != gotoLocation)
         }
     }
 }
-else{
+else if is_voting{
     instance_create(x+5,y+5,obj_voting)
+    is_voting = false;
 }
 
 </string>
