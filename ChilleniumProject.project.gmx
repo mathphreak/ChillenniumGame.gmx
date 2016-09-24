@@ -12,8 +12,9 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\NetworkingTest.gml</script>
+    <script>scripts\FetchStatus.gml</script>
     <script>scripts\HandleNetworkResponse.gml</script>
+    <script>scripts\CreateGame.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
