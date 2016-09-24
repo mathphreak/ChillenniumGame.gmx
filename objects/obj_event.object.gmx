@@ -43,19 +43,19 @@ ini_close();
 ds_grid_set(global.eventsGrid,0,index,1);
 switch(location)
 {
-    case 0:
+    case 1:
         instance_create(room_width/2 + 8,room_height/2 - 270,obj_warning);
         break;
-    case 1:
+    case 2:
         instance_create(room_width/2 - 120,room_height/2 - 57,obj_warning);
         break;
-    case 2:
+    case 3:
         instance_create(room_width/2 + 130,room_height/2 - 57,obj_warning);
         break;
-    case 3:
+    case 4:
         instance_create(room_width/2 - 180,room_height/2 + 250,obj_warning);
         break;
-    case 4:
+    case 5:
         instance_create(room_width/2 + 205,room_height/2 + 250,obj_warning);
         break;
     default:
