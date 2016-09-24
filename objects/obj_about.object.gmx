@@ -25,24 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draw the title
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_font(fnt_title);
-draw_text(room_width/2, room_height/9, "About");
-draw_set_halign(fa_left);
-
-//about stuff
-draw_text(20,room_height/5, "How to Play:");
-draw_set_font(fnt_menus);
-draw_text(200, room_height/5 + 55, "Insert rules here");
-draw_set_font(fnt_title);
-draw_text(20,room_height/2 + 20, "Credits:");
-draw_set_font(fnt_menus);
-draw_text(200,room_height/2 + 75, "Insert credits here");
-draw_set_halign(fa_center);
-draw_text(room_width/2, room_height - 75, "Back");
-if(point_in_rectangle(mouse_x, mouse_y, room_width/2 - 60, room_height - 100, room_width/2 + 60, room_height - 50)) &amp;&amp; (mouse_check_button_pressed(mb_left))
+            <string>//back button
+if(point_in_rectangle(mouse_x, mouse_y, room_width/2 - 50, room_height - 165, room_width/2 + 50, room_height - 125)) &amp;&amp; (mouse_check_button_pressed(mb_left))
 {
     room_goto(rm_mainMenu);
 }
