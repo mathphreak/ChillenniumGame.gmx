@@ -38,8 +38,8 @@
         'C is for Crap',
         'D',
         'Damn straight',
-        'E',
-        'Egregiously bad test code'
+        '',
+        ''
     );
 }
 </string>
