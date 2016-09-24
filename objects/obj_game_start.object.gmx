@@ -30,6 +30,33 @@ for(var m=0; m&lt;2; m+=1)
 {
     ds_grid_set(global.eventsGrid,0,m,0);
 }
+ini_open("events.ini");
+ini_write_string("savedata","grid",ds_grid_write(global.eventsGrid));
+if(!ini_section_exists("warntext"))
+{
+    ini_write_string("warntext","0","WARNING: IT IS 2:30");
+    ini_write_string("warntext","1","WARNING: YOU HAVE SPILLED YOUR DRINK");
+}
+if(!ini_section_exists("choicetext"))
+{
+    //write shit here
+}
+if(!ini_section_exists("c1"))
+{
+    //write shit here
+}
+if(!ini_section_exists("c2"))
+{
+    //write shit here
+}
+if(!ini_section_exists("c3"))
+{
+    //write shit here
+}
+if(!ini_section_exists("c4"))
+{
+    //write shit here
+}
 </string>
           </argument>
         </arguments>

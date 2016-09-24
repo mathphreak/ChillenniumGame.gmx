@@ -39,13 +39,38 @@ c2_text = ini_read_string("c2",string(index),"");
 c3_text = ini_read_string("c3",string(index),"");
 c4_text = ini_read_string("c4",string(index),"");
 ini_close();
+ds_grid_set(global.eventsGrid,0,index,1);
 instance_create(room_width/2,room_height/2,obj_warning);
-draw_set_font(fnt_warning);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_warning);
 draw_set_color(c_black);
+draw_set_halign(fa_left);
 draw_rectangle(0,0,room_width,80,false);
 draw_set_color(c_green);
-draw_text(100,30,"WARNING: " + warning);
+draw_text(20,30,warning);
 draw_set_color(c_black);
+draw_set_font(fnt_menus);
 </string>
           </argument>
         </arguments>
