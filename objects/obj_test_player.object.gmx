@@ -224,7 +224,7 @@ if(currentLocation != gotoLocation)
         }
         if(currentLocation == 2)
         {
-            if(x-256 &gt; 5) || (y-700 &gt; 5)
+            if(x-256 &gt; 5) || (y-700 &lt; -5)
             {
                 move_towards_point(256,700,4);
             }
@@ -290,14 +290,14 @@ if(currentLocation != gotoLocation)
         }
         if(currentLocation == 3)
         {
-            if(x-640 &gt; 5) || (y-700 &gt; 5)
+            if(x-640 &gt; 5) || (y-700 &lt; -5)
             {
                 move_towards_point(640,700,4);
             }
             else
             {
                 speed = 0;
-                currentLocation = 3;
+                currentLocation = 5;
             }
         }
         if(currentLocation == 4)

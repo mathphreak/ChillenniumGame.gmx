@@ -150,7 +150,7 @@ if(!ini_section_exists("c4")) //good option
 if(!ini_section_exists("a1")) //AI response choice 1
 {
     ini_write_string("a1","0","Somehow that broke everything");
-    ini_write_string("a1","1","You just used stain remover... On the oomputer...");
+    ini_write_string("a1","1","You just used stain remover... On the computer...");
     ini_write_string("a1","2","The tiny rock dented the ship, the missile did a bit more");
     ini_write_string("a1","3","How am I supposed to cure food poisioning");
     ini_write_string("a1","4","You left the gas pump in the tank, now we need repairs");
@@ -265,24 +265,24 @@ if(!ini_section_exists("a4")) //AI response choice 4
 if(!ini_section_exists("location"))
 {
     ini_write_real("location","0",1);
-    ini_write_real("location","1",1);
-    ini_write_real("location","2",1);
-    ini_write_real("location","3",1);
-    ini_write_real("location","4",1);
-    ini_write_real("location","5",1);
-    ini_write_real("location","6",1);
+    ini_write_real("location","1",3);
+    ini_write_real("location","2",4);
+    ini_write_real("location","3",3);
+    ini_write_real("location","4",4);
+    ini_write_real("location","5",4);
+    ini_write_real("location","6",5);
     ini_write_real("location","7",1);
     ini_write_real("location","8",1);
-    ini_write_real("location","9",1);
+    ini_write_real("location","9",5);
     ini_write_real("location","10",1);
-    ini_write_real("location","11",1);
-    ini_write_real("location","12",1);
+    ini_write_real("location","11",3);
+    ini_write_real("location","12",2);
     ini_write_real("location","13",1);
     ini_write_real("location","14",1);
-    ini_write_real("location","15",1);
+    ini_write_real("location","15",2);
     ini_write_real("location","16",1);
-    ini_write_real("location","17",1);
-    ini_write_real("location","18",1);
+    ini_write_real("location","17",2);
+    ini_write_real("location","18",3);
     ini_write_real("location","19",1);
 }
 ini_close();
