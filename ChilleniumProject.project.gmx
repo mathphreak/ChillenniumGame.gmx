@@ -20,6 +20,11 @@
     <object>objects\NetworkInfoBox</object>
     <object>objects\NetworkTester</object>
     <object>objects\obj_ship_data</object>
+    <object>objects\room1_data</object>
+    <object>objects\room2_data</object>
+    <object>objects\room3_data</object>
+    <object>objects\room4_data</object>
+    <object>objects\room5_data</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\NetTestRoom</room>
