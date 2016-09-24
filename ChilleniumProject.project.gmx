@@ -62,6 +62,7 @@
     <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_about</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

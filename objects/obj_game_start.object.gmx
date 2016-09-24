@@ -97,6 +97,7 @@ if(!ini_section_exists("c4")) //good option
     ini_write_string("c4","8","Set most of ship AC to comfortable");
     ini_write_string("c4","9","Check your calendar");
 }
+ini_close();
 instance_destroy();
 </string>
           </argument>

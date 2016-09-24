@@ -29,12 +29,12 @@
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_title);
-draw_text(room_width/2, room_height/4, "EWW#(Everything Went Wrong)");
+draw_text(room_width/2, room_height/4, "EWW: Everything Went Wrong#A game of collective overreaction");
 
 //Draw menu stuff
 draw_set_font(fnt_menus)
 draw_text(room_width/2, room_height*.59, "New Game");
-draw_text(room_width/2, room_height*.667, "Continue Game");
+draw_text(room_width/2, room_height*.667, "Continue Game(NYI)");
 draw_text(room_width/2, room_height*.75, "About");
 //draw_rectangle(375,515,520,550, true);
 //draw_rectangle(350,585,550,620, true);
@@ -45,23 +45,23 @@ draw_text(room_width/2, room_height*.75, "About");
 //Player clicks new game
 if (point_in_rectangle(mouse_x, mouse_y, 375,515,520,550)){
     if(mouse_check_button_pressed(mb_left)){
-        room_goto(NetTestRoom)
+        room_goto(NetTestRoom)//add newgame object to nettestroom
         instance_destroy();
     }
 }
 
-//Player clicks continue
+/*Player clicks continue
 if (point_in_rectangle(mouse_x, mouse_y, 350,585,550,620)){
     if(mouse_check_button_pressed(mb_left)){
         //TODO: put stuff hurr
         instance_destroy();
     }
-}
+}*/
 
 //Player clicks about
 if (point_in_rectangle(mouse_x, mouse_y, 395,660,505,690)){
     if(mouse_check_button_pressed(mb_left)){
-        //TODO: put stuff hurr
+        room_goto(rm_about);
         instance_destroy();
     }
 }
