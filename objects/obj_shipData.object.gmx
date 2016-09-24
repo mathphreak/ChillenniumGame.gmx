@@ -46,14 +46,14 @@ global.game_speed = 2;
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_shipData</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y, "Health: " + global.ship_health)
-draw_text(x, y+10, "Progress: " + global.mission_progress)
+            <string>draw_text(x, y, "Health: " + string(global.ship_health))
+draw_text(x, y+10, "Progress: " + string(global.mission_progress))
 </string>
           </argument>
         </arguments>

@@ -20,7 +20,7 @@ with NetworkInfoBox {
         var playerID = players[i, 0];
         var role = players[i, 1];
         var special = 'false';
-        if (role == 'sneaky') {
+        if (role == 'saboteur') {
             special = 'true';
         }
         http_post_string(ADDR + '/game/' + SHORTCODE + '/players/' + playerID, 'role=' + role + '&special=' + special);
