@@ -29,11 +29,12 @@
 r_str = "Creating lobby...";
 alarm[0] = 60;
 // IMPORTANT:
-// Player = [ID, Name, Ready, Selection]
+// Player = [ID, Name, Ready, Selection, Role]
 players[0,0] = '';
 players[0,1] = '';
 players[0,2] = false;
 players[0,3] = -1;
+players[0,4] = '';
 
 </string>
           </argument>
