@@ -34,3 +34,6 @@ with NetworkInfoBox {
 }
 ds_map_destroy(message_map);
 ds_map_destroy(header_map);
+
+// Start playing music!
+audio_play_sound(snd_voting_music, 1, false);

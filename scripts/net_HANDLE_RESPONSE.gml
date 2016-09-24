@@ -22,6 +22,11 @@ if ds_map_find_value(async_load, "status") == 0 {
                     players[n,1] = ds_map_find_value(map, "name");
                     players[n,2] = ds_map_find_value(map, "ready");
                     players[n,3] = ds_map_find_value(map, "chosenIndex");
+                    if ds_map_exists(map, "role") {
+                        players[n,4] = ds_map_find_value(map, "role");
+                    } else {
+                        players[n,4] = "";
+                    }
                     curr = ds_map_find_next(map, curr);
                 }
                 ds_map_destroy(map);
