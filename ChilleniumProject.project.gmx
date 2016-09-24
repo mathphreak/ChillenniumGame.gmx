@@ -27,9 +27,18 @@
   <sprites name="sprites">
     <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
+    <sprite>sprites\spr_test_player</sprite>
   </sprites>
-  <backgrounds name="background"/>
-  <paths name="paths"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\pth_1_2</path>
+    <path>paths\pth_1_3</path>
+    <path>paths\pth_3_5</path>
+    <path>paths\pth_2_3</path>
+    <path>paths\pth_2_4</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\net_GET_HOST_ADDR.gml</script>
     <script>scripts\net_HANDLE_RESPONSE.gml</script>
@@ -56,10 +65,12 @@
     <object>objects\obj_event</object>
     <object>objects\obj_warning</object>
     <object>objects\obj_voting</object>
+    <object>objects\obj_test_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
+    <room>rooms\rm_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
