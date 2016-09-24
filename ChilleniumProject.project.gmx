@@ -20,7 +20,6 @@
     <object>objects\obj_ship_data</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\NetTestRoom</room>
   </rooms>
   <help>
