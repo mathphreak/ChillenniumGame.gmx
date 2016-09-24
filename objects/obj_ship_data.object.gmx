@@ -27,7 +27,12 @@
             <kind>1</kind>
             <string>//Initialize ship st
 
-ship_health = 300
+global.ship_health = 3000
+
+
+
+
+
 </string>
           </argument>
         </arguments>
