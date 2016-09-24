@@ -151,9 +151,18 @@ if(net_allPlayersReady()) &amp;&amp; action_selected &amp;&amp; choice_propagate
     if(winningIndex == 3){}
     if(winningIndex == 4){}
     if(winningIndex &gt; -1){
+        if(players[winningIndex,4] == ini_read_string("specialist",string(obj_event.index),""))
+        {
+            ai_message = ini_read_string("a2-1",string(obj_event.index),"");
+        }
+        else
+        {
+            ai_message = ini_read_string("a2-2",string(obj_event.index),"");
+        }
         net_setStateWaiting();
     }
     instance_create(x,y,obj_voteTrans);
+    global.message = ai_message;
 }
         
 

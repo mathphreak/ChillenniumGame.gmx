@@ -25,48 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draw the title
+            <string>click = mouse_check_button_pressed(mb_left);
+if(point_in_rectangle(mouse_x,mouse_y,room_width/2 - 80,room_height/2-45,room_width/2+80,room_height/2 + 5)) &amp;&amp; (click)
+{
+    room_goto(rm_lobby);
+}
+if(point_in_rectangle(mouse_x,mouse_y,room_width/2 - 50,room_height/2 + 65,room_width/2+50,room_height/2 + 105)) &amp;&amp; (click)
+{
+    room_goto(rm_about);
+}
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_title);
-draw_text(room_width/2, room_height/4, "EWW: Everything Went Wrong#A game of collective overreaction");
-
-//Draw menu stuff
-draw_set_font(fnt_menus)
-draw_text(room_width/2, room_height*.59, "New Game");
-draw_text(room_width/2, room_height*.667, "Continue Game(NYI)");
-draw_text(room_width/2, room_height*.75, "About");
-//draw_rectangle(375,515,520,550, true);
-//draw_rectangle(350,585,550,620, true);
-//draw_rectangle(395,660,505,690, true);
-
-
-
-//Player clicks new game
-if (point_in_rectangle(mouse_x, mouse_y, 375,515,520,550)){
-    if(mouse_check_button_pressed(mb_left)){
-        room_goto(rm_lobby)//go to the lobby
-        instance_destroy();
-    }
-}
-
-/*Player clicks continue
-if (point_in_rectangle(mouse_x, mouse_y, 350,585,550,620)){
-    if(mouse_check_button_pressed(mb_left)){
-        //TODO: put stuff hurr
-        instance_destroy();
-    }
-}*/
-
-//Player clicks about
-if (point_in_rectangle(mouse_x, mouse_y, 395,660,505,690)){
-    if(mouse_check_button_pressed(mb_left)){
-        room_goto(rm_about);
-        instance_destroy();
-    }
-}
-
-
 </string>
           </argument>
         </arguments>
