@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.eventsGrid = ds_grid_create(1,2);
-for(var m=0; m&lt;2; m+=1)
+            <string>global.eventsGrid = ds_grid_create(1,9);
+for(var m=0; m&lt;9; m+=1)
 {
     ds_grid_set(global.eventsGrid,0,m,0);
 }
@@ -34,20 +34,42 @@ ini_open("events.ini");
 ini_write_string("savedata","grid",ds_grid_write(global.eventsGrid));
 if(!ini_section_exists("warntext"))
 {
-    ini_write_string("warntext","0","WARNING: IT IS 2:30");
+    ini_write_string("warntext","0","WARNING: IT IS 2:30PM");
     ini_write_string("warntext","1","WARNING: YOU HAVE SPILLED YOUR DRINK");
+    ini_write_string("warntext","2","WARNING: SHIP IMPACTED WITH SMALL ROCK");
+    ini_write_string("warntext","3","WARNING: ALL BANANAS ON THE SHIP HAVE BECOME SLIGHTLY BROWN");
+    ini_write_string("warntext","4","WARNING: SHIP FUEL AT 99 PERCENT CAPACITY");
+    ini_write_string("warntext","5","WARNING: POWER LEVELS UNDER 9000");
+    ini_write_string("warntext","6","WARNING: YOU WANT TO BE THE VERY BEST LIKE NO ONE EVER WAS");
+    ini_write_string("warntext","7","WARNING: NO LONGER IN GALAXY FAR FAR AWAY");
+    ini_write_string("warntext","8","WARNING: AIR CONDITIONING SLIGHTLY COLDER THAN COMFORTABLE");
+    ini_write_string("warntext","9","WARNING: THERE IS NO CAUSE FOR ALARM");
 }
-if(!ini_section_exists("choicetext"))
+if(!ini_section_exists("c1")) //Jester option
 {
-    //write shit here
+    ini_write_string("c1","0","You change the clock to 2:31pm");
+    ini_write_string("c1","1","Use stain remover");
+    ini_write_string("c1","2","Fire missle at rock");
+    ini_write_string("c1","3","Frantically eat all bananas");
+    ini_write_string("c1","4","Attempt mid-flight refuel");
+    ini_write_string("c1","5","Make newer reference");
+    ini_write_string("c1","6","Prepare for trouble");
+    ini_write_string("c1","7","Turn around");
+    ini_write_string("c1","8","Set whole ship AC to comfortable");
+    ini_write_string("c1","9","Scream and run in circles");
 }
-if(!ini_section_exists("c1"))
+if(!ini_section_exists("c2")) //Specialist option
 {
-    //write shit here
-}
-if(!ini_section_exists("c2"))
-{
-    //write shit here
+    ini_write_string("c2","0","You change the clock to 3:30pm");
+    ini_write_string("c2","1","Have ship AI deal with it");
+    ini_write_string("c2","2","Move rock with your mind");
+    ini_write_string("c2","3","Make banana bread");
+    ini_write_string("c2","4","Check fuel gauge");
+    ini_write_string("c2","5","Turn on backup generators");
+    ini_write_string("c2","6","Put on running shoes");
+    ini_write_string("c2","7","Stop by frozen planet");
+    ini_write_string("c2","8","Check for open doors");
+    ini_write_string("c2","9","Check AI programming");
 }
 if(!ini_section_exists("c3"))
 {
