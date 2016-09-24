@@ -74,16 +74,20 @@ net_offerChoice(
 
 
 //Done voting
-
+ini_open("events.ini");
 if(net_allPlayersReady()){
     var winningIndex = net_getWinningChoice();
     if (winningIndex == 0) {
+    var message = ini_read_string("a1",string(obj_event.index),"");
     }
     if (winningIndex == 1) {
+    
     }
     if (winningIndex == 2) {
+    var message = ini_read_string("a3",string(obj_event.index),"");
     }
     if (winningIndex == 3) {
+    var message = ini_read_string("a4",string(obj_event.index),"");
     }
     if(winningIndex &gt; -1){
         net_setStateWaiting();
