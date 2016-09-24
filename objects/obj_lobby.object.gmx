@@ -89,6 +89,7 @@ draw_rectangle(375,515,520,550, true);
 if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 375,515,520,550)){
     if(mouse_check_button_pressed(mb_left)){
         net_distributeRoles();
+        net_setStateWaiting();
         room_goto(rm_game)//add newgame object to nettestroom
         instance_destroy();
     }
