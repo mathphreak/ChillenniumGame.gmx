@@ -41,6 +41,27 @@
     <font>fonts\fnt_menus</font>
     <font>fonts\fnt_warning</font>
   </fonts>
+  <objects name="objects">
+    <object>objects\NetworkInfoBox</object>
+    <object>objects\NetworkTester</object>
+    <object>objects\obj_ship_data</object>
+    <object>objects\room1_data</object>
+    <object>objects\room2_data</object>
+    <object>objects\room3_data</object>
+    <object>objects\room4_data</object>
+    <object>objects\room5_data</object>
+    <object>objects\obj_game_start</object>
+    <object>objects\obj_mainMenu</object>
+    <object>objects\obj_event</object>
+    <object>objects\obj_warning</object>
+    <object>objects\obj_voting</object>
+    <object>objects\obj_test_player</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_mainMenu</room>
+    <room>rooms\NetTestRoom</room>
+    <room>rooms\rm_game</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
