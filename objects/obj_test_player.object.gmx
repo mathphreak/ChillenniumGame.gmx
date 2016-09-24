@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>currentLocation = 3;
 
-image_index = random(4);
+image_index = irandom(4);
 image_speed = 0;
 </string>
           </argument>
