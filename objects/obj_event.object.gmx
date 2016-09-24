@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>randomize();
-index = irandom(9);
+index = irandom(14);
 while((ds_grid_get(global.eventsGrid,0,index)) != 0)
 {
-    index = irandom(9);
+    index = irandom(14);
 }
 ini_open("events.ini");
 event_text = ini_read_string("choicetext",string(index),"");
@@ -71,34 +71,6 @@ draw_set_color(c_green);
 draw_text(20,30,warning);
 draw_set_color(c_black);
 draw_set_font(fnt_menus);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_warning)
-{
-    instance_destroy();
-    audio_stop_sound(snd_warning);
-}
-instance_destroy();
 </string>
           </argument>
         </arguments>

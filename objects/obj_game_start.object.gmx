@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.eventsGrid = ds_grid_create(1,9);
-for(var m=0; m&lt;9; m+=1)
+            <string>global.eventsGrid = ds_grid_create(1,14);
+for(var m=0; m&lt;14; m+=1)
 {
     ds_grid_set(global.eventsGrid,0,m,0);
 }
@@ -44,6 +44,11 @@ if(!ini_section_exists("warntext"))
     ini_write_string("warntext","7","WARNING: NO LONGER IN GALAXY FAR FAR AWAY");
     ini_write_string("warntext","8","WARNING: AIR CONDITIONING SLIGHTLY COLDER THAN COMFORTABLE");
     ini_write_string("warntext","9","WARNING: THERE IS NO CAUSE FOR ALARM");
+    ini_write_string("warntext","10","WARNING: A CREWMEMBER MADE A BAD PUN");
+    ini_write_string("warntext","11","WARNING: LEMONADE NOT ICE COLD");
+    ini_write_string("warntext","12","WARNING: LIGHTBULB FLICKERING OCCASIONALLY");
+    ini_write_string("warntext","13","WARNING: COMPUTER A BIT SLOW");
+    ini_write_string("warntext","14","WARNING: CAT VIDEO WILL NOT LOAD");
 }
 if(!ini_section_exists("c1")) //Jester option
 {
@@ -57,6 +62,11 @@ if(!ini_section_exists("c1")) //Jester option
     ini_write_string("c1","7","Turn around");
     ini_write_string("c1","8","Set whole ship AC to comfortable");
     ini_write_string("c1","9","Scream and run in circles");
+    ini_write_string("c1","10","Make another bad pun");
+    ini_write_string("c1","11","Make new batch");
+    ini_write_string("c1","12","There's a joke in there somewhere");
+    ini_write_string("c1","13","Hit it");
+    ini_write_string("c1","14","Try again later");
 }
 if(!ini_section_exists("c2")) //Specialist option
 {
@@ -70,6 +80,11 @@ if(!ini_section_exists("c2")) //Specialist option
     ini_write_string("c2","7","Stop by frozen planet");
     ini_write_string("c2","8","Check for open doors");
     ini_write_string("c2","9","Check AI programming");
+    ini_write_string("c2","10","Change humor setting on AI");
+    ini_write_string("c2","11","Fix the refrigerator");
+    ini_write_string("c2","12","Screw the bulb in slightly tighter");
+    ini_write_string("c2","13","Check for virus");
+    ini_write_string("c2","14","Check router");
 }
 if(!ini_section_exists("c3")) //does nothing
 {
@@ -83,6 +98,11 @@ if(!ini_section_exists("c3")) //does nothing
     ini_write_string("c3","7","Didn't we want to get home?");
     ini_write_string("c3","8","Put on a jacket");
     ini_write_string("c3","9","Why would you tell us that?");
+    ini_write_string("c3","10","Awkward silence");
+    ini_write_string("c3","11","Add ice to lemonade");
+    ini_write_string("c3","12","Wait until flickering more");
+    ini_write_string("c3","13","Have AI deal with it");
+    ini_write_string("c3","14","Wait for video to buffer");
 }
 if(!ini_section_exists("c4")) //good option
 {
@@ -96,6 +116,11 @@ if(!ini_section_exists("c4")) //good option
     ini_write_string("c4","7","Don't talk about midichlorians");
     ini_write_string("c4","8","Set most of ship AC to comfortable");
     ini_write_string("c4","9","Check your calendar");
+    ini_write_string("c4","10","Agree to make no more puns");
+    ini_write_string("c4","11","Pour everyone a glass of lemonade");
+    ini_write_string("c4","12","Replace bulb");
+    ini_write_string("c4","13","Try turning it off and on again");
+    ini_write_string("c4","14","Troubleshoot wifi");
 }
 ini_close();
 instance_destroy();
