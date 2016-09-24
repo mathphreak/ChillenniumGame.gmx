@@ -62,7 +62,6 @@ vote5_count = 0;
 if(net_allPlayersReady()){
     var winningIndex = net_getWinningChoice();
     if (winningIndex == 0) {
-        room_goto(rm_game);
     }
     if(winningIndex &gt; -1){
         net_setStateWaiting();
