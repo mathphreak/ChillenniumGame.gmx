@@ -29,6 +29,8 @@ ds_map_add(message_map, 'choice5', choice5);
 ds_map_add(message_map, 'choice5Special', choice5Special);
 var header_map = ds_map_create();
 ds_map_add(header_map, "Content-Type", "application/json");
-http_request(ADDR + '/game/' + SHORTCODE + '/choice', "POST", header_map, json_encode(message_map));
+with NetworkInfoBox {
+    http_request(ADDR + '/game/' + SHORTCODE + '/choice', "POST", header_map, json_encode(message_map));
+}
 ds_map_destroy(message_map);
 ds_map_destroy(header_map);
