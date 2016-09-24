@@ -24,6 +24,7 @@
     <background>background\background0</background>
     <background>background\About</background>
     <background>background\Opening_Screen</background>
+    <background>background\lobby</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_1_2</path>
