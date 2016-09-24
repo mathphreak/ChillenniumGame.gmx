@@ -52,7 +52,7 @@
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_event</object>
     <object>objects\obj_warning</object>
-  </objects>
+    <object>objects\obj_voting</object>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\NetTestRoom</room>
