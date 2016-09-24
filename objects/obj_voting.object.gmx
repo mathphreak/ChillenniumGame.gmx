@@ -86,6 +86,7 @@ if(net_allPlayersReady()) &amp;&amp; !action_selected{
     var winningIndex = net_getWinningChoice();
     if (winningIndex == 0) {
         ai_message = ini_read_string("a1",string(obj_event.index),"");
+        global.ship_health -= 5 * global.game_speed
         action_selected = true;
         choice_propagated = false;
     }
@@ -100,6 +101,7 @@ if(net_allPlayersReady()) &amp;&amp; !action_selected{
     }
     if (winningIndex == 3) {
         ai_message = ini_read_string("a4",string(obj_event.index),"");
+        global.mission_progress += 5 * global.game_speed;
         action_selected = true;
         choice_propagated = false;
     }

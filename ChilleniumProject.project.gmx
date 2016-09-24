@@ -48,12 +48,7 @@
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
     <object>objects\NetworkTester</object>
-    <object>objects\obj_ship_data</object>
-    <object>objects\room1_data</object>
-    <object>objects\room2_data</object>
-    <object>objects\room3_data</object>
-    <object>objects\room4_data</object>
-    <object>objects\room5_data</object>
+    <object>objects\obj_shipData</object>
     <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_lobby</object>
