@@ -31,6 +31,13 @@ vote2_count = 0;
 vote3_count = 0;
 vote4_count = 0;
 vote5_count = 0;
+action_selected = false;
+actor_selected = false;
+choice_propagated = false;
+ai_message = "";
+players = net_getPlayers()
+numPlayers = array_height_2d(players)
+
 
 net_offerChoice(
     'What do you want to do?',
@@ -75,25 +82,104 @@ net_offerChoice(
 
 //Done voting
 ini_open("events.ini");
-if(net_allPlayersReady()){
+if(net_allPlayersReady()) &amp;&amp; !action_selected{
     var winningIndex = net_getWinningChoice();
     if (winningIndex == 0) {
-    var message = ini_read_string("a1",string(obj_event.index),"");
+        ai_message = ini_read_string("a1",string(obj_event.index),"");
+        action_selected = true;
+        choice_propagated = false;
     }
     if (winningIndex == 1) {
-    
+        action_selected = true;
+        choice_propagated = false;    
     }
     if (winningIndex == 2) {
-    var message = ini_read_string("a3",string(obj_event.index),"");
+        ai_message = ini_read_string("a3",string(obj_event.index),"");
+        action_selected = true;
+        choice_propagated = false;
     }
     if (winningIndex == 3) {
-    var message = ini_read_string("a4",string(obj_event.index),"");
+        ai_message = ini_read_string("a4",string(obj_event.index),"");
+        action_selected = true;
+        choice_propagated = false;
     }
+}
+
+if(action_selected)&amp;&amp; !(actor_selected){
+    if(numPlayers == 5){
+        net_offerChoice(
+            'Who should perform the action?',
+            players[0,1],
+            players[0,1],
+            players[1,1],
+            players[1,1],
+            players[2,1],
+            players[2,1],
+            players[3,1],
+            players[3,1],
+            players[4,1],
+            players[4,1],
+        );
+    }
+    else if(numPlayers == 3){
+        net_offerChoice(
+            'Who should perform the action?',
+            players[0,1],
+            players[0,1],
+            players[1,1],
+            players[1,1],
+            players[2,1],
+            players[2,1],
+            "",
+            "",
+            "",
+            "",
+        );
+    }
+    actor_selected = true;
+}
+
+if action_selected &amp;&amp; !net_allPlayersReady() {
+    choice_propagated = true;
+}
+
+if(net_allPlayersReady()) &amp;&amp; action_selected &amp;&amp; choice_propagated &amp;&amp; actor_selected{
+    var winningIndex = net_getWinningChoice();
+    if(winningIndex == 0){}
+    if(winningIndex == 1){}
+    if(winningIndex == 2){}
+    if(winningIndex == 3){}
+    if(winningIndex == 4){}
     if(winningIndex &gt; -1){
         net_setStateWaiting();
     }
 }
         
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+    
 </string>
           </argument>
         </arguments>

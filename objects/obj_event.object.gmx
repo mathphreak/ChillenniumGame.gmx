@@ -32,7 +32,7 @@ while((ds_grid_get(global.eventsGrid,0,index)) != 0)
     index = irandom(19);
 }
 ini_open("events.ini");
-warning = ini_read_string("warntext",string(index),"");
+global.message = ini_read_string("warntext",string(index),"");
 c1_text = ini_read_string("c1",string(index),"");
 c2_text = ini_read_string("c2",string(index),"");
 c3_text = ini_read_string("c3",string(index),"");
@@ -87,7 +87,7 @@ draw_set_color(c_black);
 draw_set_halign(fa_left);
 draw_rectangle(0,0,room_width,80,false);
 draw_set_color(c_green);
-draw_text(20,30,warning);
+draw_text(20,30,global.message);
 draw_set_color(c_black);
 draw_set_font(fnt_menus);
 </string>
