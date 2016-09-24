@@ -150,7 +150,7 @@ if(!ini_section_exists("c4")) //good option
 if(!ini_section_exists("a1")) //AI response choice 1
 {
     ini_write_string("a1","0","Somehow that broke everything");
-    ini_write_string("a1","1","You just used stain remover... On the oomputer...");
+    ini_write_string("a1","1","You just used stain remover... On the computer...");
     ini_write_string("a1","2","The tiny rock dented the ship, the missile did a bit more");
     ini_write_string("a1","3","How am I supposed to cure food poisioning");
     ini_write_string("a1","4","You left the gas pump in the tank, now we need repairs");
