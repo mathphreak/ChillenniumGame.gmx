@@ -25,18 +25,25 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\NetworkingTest.gml</script>
+    <script>scripts\FetchStatus.gml</script>
     <script>scripts\HandleNetworkResponse.gml</script>
+    <script>scripts\CreateGame.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
     <object>objects\NetworkTester</object>
     <object>objects\obj_ship_data</object>
+    <object>objects\room1_data</object>
+    <object>objects\room2_data</object>
+    <object>objects\room3_data</object>
+    <object>objects\room4_data</object>
+    <object>objects\room5_data</object>
     <object>objects\obj_event</object>
   </objects>
   <rooms name="rooms">
