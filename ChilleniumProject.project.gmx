@@ -52,6 +52,7 @@
     <object>objects\room5_data</object>
     <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
+    <object>objects\obj_lobby</object>
     <object>objects\obj_event</object>
     <object>objects\obj_warning</object>
     <object>objects\obj_voting</object>
@@ -61,7 +62,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
-    <room>rooms\NetTestRoom</room>
+    <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
   </rooms>
