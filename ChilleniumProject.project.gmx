@@ -51,6 +51,7 @@
     <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_event</object>
+    <object>objects\obj_warning</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
