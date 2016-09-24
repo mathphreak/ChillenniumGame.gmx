@@ -201,7 +201,7 @@ if(!ini_section_exists("a2-2")) //AI response choice 2 if pass
     ini_write_string("a2-2","3","You're actually a pretty good cook");
     ini_write_string("a2-2","4","My bad, it's still 100 percent");
     ini_write_string("a2-2","5","Power level back to over 9000!!!");
-    ini_write_string("a2-2","6","You got to there faster");
+    ini_write_string("a2-2","6","You got there faster");
     ini_write_string("a2-2","7","You find some helpful rebels");
     ini_write_string("a2-2","8","The server room was open causing a draft");
     ini_write_string("a2-2","9","My bad...");
@@ -284,6 +284,29 @@ if(!ini_section_exists("location"))
     ini_write_real("location","17",2);
     ini_write_real("location","18",3);
     ini_write_real("location","19",1);
+}
+if(!ini_section_exists("specialist"))
+{
+    ini_write_string("specialist","0","scientist");
+    ini_write_string("specialist","1","medic");
+    ini_write_string("specialist","2","engineer");
+    ini_write_string("specialist","3","medic");
+    ini_write_string("specialist","4","pilot");
+    ini_write_string("specialist","5","pilot");
+    ini_write_string("specialist","6","scientist");
+    ini_write_string("specialist","7","pilot");
+    ini_write_string("specialist","8","engineer");
+    ini_write_string("specialist","9","pilot");
+    ini_write_string("specialist","10","medic");
+    ini_write_string("specialist","11","engineer");
+    ini_write_string("specialist","12","scientist");
+    ini_write_string("specialist","13","engineer");
+    ini_write_string("specialist","14","engineer");
+    ini_write_string("specialist","15","scientist");
+    ini_write_string("specialist","16","pilot");
+    ini_write_string("specialist","17","medic");
+    ini_write_string("specialist","18","scientist");
+    ini_write_string("specialist","19","medic");
 }
 ini_close();
 instance_destroy();
