@@ -164,7 +164,7 @@ players[0,3] = -1;
             <kind>1</kind>
             <string>draw_text(512, 10, r_str);
 var players = net_getPlayers();
-if players[0,0] != '' {
+if room == rm_lobby &amp;&amp; players[0,0] != '' {
     for (var i = 0; i &lt; array_height_2d(players); i++) {
         // id
         // draw_text(212, 35 + 25 * i, players[i,0]);
