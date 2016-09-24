@@ -74,7 +74,7 @@ if(!ini_section_exists("c1")) //Jester option
     ini_write_string("c1","14","Try again later");
     ini_write_string("c1","15","Pretend you know what it means");
     ini_write_string("c1","16","Deal with no aux cord");
-    ini_write_string("c1","17","Apply caffiene");
+    ini_write_string("c1","17","Apply caffeine");
     ini_write_string("c1","18","Open another dip");
     ini_write_string("c1","19","Blame crew member");
 }
@@ -146,6 +146,121 @@ if(!ini_section_exists("c4")) //good option
     ini_write_string("c4","17","Have other crew take more work");
     ini_write_string("c4","18","Use remaining chips during next meal");
     ini_write_string("c4","19","Laugh heartily");
+}
+if(!ini_section_exists("a1")) //AI response choice 1
+{
+    ini_write_string("a1","0","Somehow that broke everything");
+    ini_write_string("a1","1","You just used stain remover... On the oomputer...");
+    ini_write_string("a1","2","The tiny rock dented the ship, the missile did a bit more");
+    ini_write_string("a1","3","How am I supposed to cure food poisioning");
+    ini_write_string("a1","4","You left the gas pump in the tank, now we need repairs");
+    ini_write_string("a1","5","Arrow in the knee? Really?");
+    ini_write_string("a1","6","Make it double. You're blasting off again");
+    ini_write_string("a1","7","Now you're off course and lost, luckily I'm not");
+    ini_write_string("a1","8","My servers need to stay cold. Shutting down...");
+    ini_write_string("a1","9","What did I just say?");
+    ini_write_string("a1","10","I can't handle it anymore. Shutting down...");
+    ini_write_string("a1","11","Error: Life failed to give you lemons");
+    ini_write_string("a1","12","Really? A lightbulb joke?");
+    ini_write_string("a1","13","Ouch! Why would you hit me?");
+    ini_write_string("a1","14","But I wanted to see that video...");
+    ini_write_string("a1","15","You were wrong");
+    ini_write_string("a1","16","Things are so quiet I can hear myself think");
+    ini_write_string("a1","17","Caffeine won't last them all day");
+    ini_write_string("a1","18","Great, now you have too much dip for your chips");
+    ini_write_string("a1","19","Come on guys, stop arguing. It doesn't matter who did it");
+}
+if(!ini_section_exists("a2-1")) //AI response choice 2 if fail
+{
+    ini_write_string("a2-1","0","There's no Daylight Savings in space");
+    ini_write_string("a2-1","1","What am I, your maid?");
+    ini_write_string("a2-1","2","You really thought that would work?");
+    ini_write_string("a2-1","3","Too bad you aren't a better cook");
+    ini_write_string("a2-1","4","I was wrong, it was actually 9 percent");
+    ini_write_string("a2-1","5","Power surge imminent...");
+    ini_write_string("a2-1","6","You can't do that here");
+    ini_write_string("a2-1","7","This ship has no tow line");
+    ini_write_string("a2-1","8","Found one, it was the airlock");
+    ini_write_string("a2-1","9","Looks like there was cause for alarm");
+    ini_write_string("a2-1","10","Let's not touch that");
+    ini_write_string("a2-1","11","The fridge used to work, now your food is spoiled");
+    ini_write_string("a2-1","12","You just burnt your hand and my circuits");
+    ini_write_string("a2-1","13","No virus, but you did kinda break something else");
+    ini_write_string("a2-1","14","There is no router, this is the future");
+    ini_write_string("a2-1","15","Sorry no luck");
+    ini_write_string("a2-1","16","Sorry this system doesn't have that installed");
+    ini_write_string("a2-1","17","Probably shouldn't have let them drive...");
+    ini_write_string("a2-1","18","Not so lucky, still leftover chips");
+    ini_write_string("a2-1","19","That doesn't make it less gross");
+}
+if(!ini_section_exists("a2-2")) //AI response choice 2 if pass
+{
+    ini_write_string("a2-2","0","Wow it was actually daylight savings");
+    ini_write_string("a2-2","1","Fine, I guess if I have to");
+    ini_write_string("a2-2","2","That worked?");
+    ini_write_string("a2-2","3","You're actually a pretty good cook");
+    ini_write_string("a2-2","4","My bad, it's still 100 percent");
+    ini_write_string("a2-2","5","Power level back to over 9000!!!");
+    ini_write_string("a2-2","6","You got to there faster");
+    ini_write_string("a2-2","7","You find some helpful rebels");
+    ini_write_string("a2-2","8","The server room was open causing a draft");
+    ini_write_string("a2-2","9","My bad...");
+    ini_write_string("a2-2","10","Y'know that was actually kinda funny");
+    ini_write_string("a2-2","11","Lemonade is now ice cold. Good job");
+    ini_write_string("a2-2","12","Looks like that worked, who put that bulb in?");
+    ini_write_string("a2-2","13","Not my fault you gave me a virus");
+    ini_write_string("a2-2","14","Looks like it needed a good reboot");
+    ini_write_string("a2-2","15","Have you been reading the dictionary?");
+    ini_write_string("a2-2","16","Wireless systems online");
+    ini_write_string("a2-2","17","Luckily their job was low-key today");
+    ini_write_string("a2-2","18","Looks like you ended with just enough");
+    ini_write_string("a2-2","19","I guess you're right");
+}
+if(!ini_section_exists("a3")) //AI response choice 3
+{
+    ini_write_string("a3","0","Ignoring the warning caused a minor setback");
+    ini_write_string("a3","1","That took a bit longer than expected");
+    ini_write_string("a3","2","Minor dent sustained to ship");
+    ini_write_string("a3","3","Extra time must be spent to resupply at next stop");
+    ini_write_string("a3","4","Fill up takes longer than expected");
+    ini_write_string("a3","5","It isn't, need new capacitors at next stop");
+    ini_write_string("a3","6","Only have so much, must go back to get more");
+    ini_write_string("a3","7","Yeah, redirecting...");
+    ini_write_string("a3","8","Server room door left open, slows down progress");
+    ini_write_string("a3","9","Because I didn't want to worry you with the real problem");
+    ini_write_string("a3","10","Crew can't look each other in the eye, loses some time");
+    ini_write_string("a3","11","Must repair refrigerator at next stop");
+    ini_write_string("a3","12","Short circuit, must replace fuses immediately");
+    ini_write_string("a3","13","Rebooting all systems...");
+    ini_write_string("a3","14","You waited longer than expected");
+    ini_write_string("a3","15","They didn't know either");
+    ini_write_string("a3","16","Just not the same...");
+    ini_write_string("a3","17","If you're resting then you're not moving");
+    ini_write_string("a3","18","Chips go stale, need a resupply");
+    ini_write_string("a3","19","Can't get much work done that way");
+}
+if(!ini_section_exists("a4")) //AI response choice 4
+{
+    ini_write_string("a4","0","Scheduled maintenance completed");
+    ini_write_string("a4","1","Cleans it up fast");
+    ini_write_string("a4","2","All dents from small rocks covered for now and future");
+    ini_write_string("a4","3","A good source of Potassium");
+    ini_write_string("a4","4","Good choice, it was a bit lower than 99 percent");
+    ini_write_string("a4","5","Very true, optimism raises the power level");
+    ini_write_string("a4","6","Good choice, train him well");
+    ini_write_string("a4","7","Better choice than the creators themselves");
+    ini_write_string("a4","8","Good job not changing the server temperature");
+    ini_write_string("a4","9","Schedduled fuel stop done on time");
+    ini_write_string("a4","10","Thank you");
+    ini_write_string("a4","11","What a way to solve a problem");
+    ini_write_string("a4","12","Annoying flickering gone");
+    ini_write_string("a4","13","Computer is much faster now");
+    ini_write_string("a4","14","It fixes itself no problem");
+    ini_write_string("a4","15","Found it in a fraction of a second");
+    ini_write_string("a4","16","If it ain't broke don't fix it");
+    ini_write_string("a4","17","Teamwork makes the dream work");
+    ini_write_string("a4","18","Gotta love nachos");
+    ini_write_string("a4","19","If it's a joke no one really cares");
 }
 ini_close();
 instance_destroy();
