@@ -151,10 +151,10 @@ if(net_allPlayersReady()){
         var currentPlayer = instance_find(currentPlayerType, 0);
         var currentRoom = currentPlayer.currentRoom;
         if(players[i, 3] == "Fix"){
-            obj_shipData.rooms[currentRoom,0] = "fixed"
+            obj_shipData.rooms[currentRoom-1,0] = "fixed"
         }
         else if(players[i,3] == "Break"){
-            obj_shipData.rooms[currentRoom,0] = "fixed"
+            obj_shipData.rooms[currentRoom-1,0] = "fixed"
         }
         else{
             if(players[i,3] == "Room 1"){
