@@ -32,6 +32,7 @@
     <sprite>sprites\spr_player_2</sprite>
     <sprite>sprites\spr_player_3</sprite>
     <sprite>sprites\spr_sprite_4</sprite>
+    <sprite>sprites\spr_dead_ship</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -53,10 +54,8 @@
     <script>scripts\net_createGame.gml</script>
     <script>scripts\net_getPlayers.gml</script>
     <script>scripts\net_distributeRoles.gml</script>
-    <script>scripts\net_setStateWaiting.gml</script>
     <script>scripts\net_offerChoice.gml</script>
     <script>scripts\net_allPlayersReady.gml</script>
-    <script>scripts\net_getWinningChoice.gml</script>
     <script>scripts\music_next.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -83,12 +82,14 @@
     <object>objects\obj_player_4</object>
     <object>objects\obj_turnCycle</object>
     <object>objects\obj_sound_controller</object>
+    <object>objects\obj_dead_ship</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
+    <room>rooms\rm_lost_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

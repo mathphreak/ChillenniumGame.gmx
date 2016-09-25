@@ -29,12 +29,13 @@
 r_str = "Creating lobby...";
 alarm[0] = 60;
 // IMPORTANT:
-// Player = [ID, Name, Ready, Selection, Role]
+// Player = [ID, Name, Ready, Choice, Role, Saboteur?]
 players[0,0] = '';
 players[0,1] = '';
 players[0,2] = false;
-players[0,3] = -1;
+players[0,3] = '';
 players[0,4] = '';
+players[0,5] = false;
 trust_ready = true;
 
 </string>
