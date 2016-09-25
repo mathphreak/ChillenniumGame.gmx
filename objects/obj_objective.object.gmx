@@ -93,7 +93,11 @@ doProcess = false
             if (currentRoom == coRoom) {
                 if (obj_shipData.rooms[currentRoom-1,0] == 'clean' &amp;&amp; coComplete) {
                     // Objective Complete!
-                    obj_shipData.ship_cleanliness += 1000;
+                    obj_shipData.objectives_completed++;
+                    if (obj_shipData.objectives_completed &gt;= 10) {
+                        // you win
+                        room_goto(rm_won_game);
+                    }
                     // Attempt to create objective
                     do {
                         var newObjective = irandom(array_height_2d(objectives) - 1);

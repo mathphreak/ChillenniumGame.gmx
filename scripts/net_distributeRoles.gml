@@ -20,6 +20,8 @@ with NetworkInfoBox {
     
     var ADDR = net_GET_HOST_ADDR();
     
+    randomize();
+    
     var messmakerIdx = irandom(array_height_2d(players) - 1);
     players[messmakerIdx, 5] = true;
 

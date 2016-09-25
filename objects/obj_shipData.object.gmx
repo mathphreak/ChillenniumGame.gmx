@@ -28,7 +28,9 @@
             <string>//Initialize data
 //(these values will probbaly change)
 ship_cleanliness = 10;
-turns_remaining = 10;
+objectives_completed = 0;
+turns_remaining = 30;
+doProcess = false;
 
 //Every room currently clean
 for (var i =0; i&lt;6; i+=1){
@@ -68,16 +70,24 @@ rooms[5, 1] = "Engine Room 2";
             <string>//check amount of messy rooms
 //only every 4th turn
 
-if(net_allPlayersReady()){
+if(doProcess){
+    doProcess = false;
     for (var i =0; i&lt;6; i+=1){
         if(rooms[i,0] == "messy"){
             //temporary
             ship_cleanliness -= 1;
         }
-        if(room[i,0] == "clean"){
+        if(rooms[i,0] == "clean"){
             //effictively stalls loss of hp
+            ship_cleanliness += 0.5;
         }
-    }   
+    }
+    
+    ship_cleanliness = clamp(ship_cleanliness, -1, 10);
+    
+    if (ship_cleanliness &lt; 0) {
+        room_goto(rm_lost_game);
+    }
 }     
 </string>
           </argument>
@@ -112,6 +122,7 @@ for (var i=0; i&lt;array_height_2d(rooms); i+=1){
 
 draw_text(x, y+20, "Rooms messy: " + string(messy_number))
 draw_text(x, y+40, "Turns left:" +string((turns_remaining -(obj_turnCycle.turns_elapsed))))
+draw_text(x, y+60, "Objectives completed:" +string(objectives_completed) + "/10")
 
 </string>
           </argument>

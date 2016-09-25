@@ -303,6 +303,7 @@ if(net_allPlayersReady()){
     }
 
     obj_objective.doProcess = true;
+    obj_shipData.doProcess = true;
 }
 
 

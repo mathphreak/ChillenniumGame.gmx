@@ -87,6 +87,7 @@
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
     <room>rooms\rm_lost_game</room>
+    <room>rooms\rm_won_game</room>
     <room>rooms\rm_cutscene</room>
   </rooms>
   <help>
