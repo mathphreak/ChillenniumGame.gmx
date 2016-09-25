@@ -67,7 +67,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Do we have a valid number of players?
+            <string>//back to menu
+if(point_in_rectangle(mouse_x, mouse_y, room_width/2-170, room_height/2, room_width/2+160, room_height/2+100)) &amp;&amp; (mouse_check_button_pressed(mb_left))
+{
+    room_goto(rm_mainMenu);
+}
+
+// Do we have a valid number of players?
 var players = net_getPlayers();
 var playerCount = array_height_2d(players);
 var allReady = net_allPlayersReady();
@@ -89,6 +95,7 @@ if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
         instance_destroy();
     }
 }
+
 
 draw_set_alpha(1);
 
