@@ -63,6 +63,7 @@ turns_elapsed += 1;
 if(playerTurn == 0)
 {
 }
+}
     //redraw ship health
     //redraw broken rooms num
 
