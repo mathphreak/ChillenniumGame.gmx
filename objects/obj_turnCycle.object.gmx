@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerTurn = 1;
+            <string>randomize();
+playerTurn = 1;
 turns_elapsed = 0;
+//Random break chance
+break_chance = 0;
+random_room = 0;
 </string>
           </argument>
         </arguments>
@@ -49,7 +53,8 @@ turns_elapsed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if its player turn
+            <string>
+//if its player turn
 while turns_elapsed &lt;= obj_shipData.turns_remaining{
 //player picks a room
 //room status changes to player
@@ -63,7 +68,16 @@ turns_elapsed += 1;
 if(playerTurn == 0)
     //redraw ship health
     //redraw broken rooms num
+    //make new random break room chance
+    break_chance = round(random(10))
 }
+
+//random break chance
+if(break_chance == 1){
+    random_room = round(random(6))
+    rooms[random_room, 0] = "broken"
+}
+    
 
 
 //end of turn cycle
