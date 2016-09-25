@@ -21,11 +21,16 @@ if ds_map_find_value(async_load, "status") == 0 {
                     players[n,0] = ds_map_find_value(map, "_id");
                     players[n,1] = ds_map_find_value(map, "name");
                     players[n,2] = ds_map_find_value(map, "ready");
-                    players[n,3] = ds_map_find_value(map, "chosenIndex");
+                    players[n,3] = ds_map_find_value(map, "choice");
                     if ds_map_exists(map, "role") {
                         players[n,4] = ds_map_find_value(map, "role");
                     } else {
                         players[n,4] = "";
+                    }
+                    if ds_map_exists(map, "saboteur") {
+                        players[n,5] = ds_map_find_value(map, "saboteur");
+                    } else {
+                        players[n,5] = false;
                     }
                     curr = ds_map_find_next(map, curr);
                 }

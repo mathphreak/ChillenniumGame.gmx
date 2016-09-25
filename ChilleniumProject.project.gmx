@@ -54,10 +54,8 @@
     <script>scripts\net_createGame.gml</script>
     <script>scripts\net_getPlayers.gml</script>
     <script>scripts\net_distributeRoles.gml</script>
-    <script>scripts\net_setStateWaiting.gml</script>
     <script>scripts\net_offerChoice.gml</script>
     <script>scripts\net_allPlayersReady.gml</script>
-    <script>scripts\net_getWinningChoice.gml</script>
     <script>scripts\music_next.gml</script>
   </scripts>
   <fonts name="fonts">
