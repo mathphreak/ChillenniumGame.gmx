@@ -29,10 +29,10 @@
 
 if(point_in_rectangle(mouse_x, mouse_y, room_width/2-175, room_height/2-50, room_width/2+175, room_height/2+10)) &amp;&amp; (click)
 {
-    room_goto(rm_lobby);
+    room_goto(rm_howto);
 }
 
-if(point_in_rectangle(mouse_x, mouse_y, room_width/2-90, room_height/2+75, room_width/2+80, room_height/2+125)) &amp;&amp; (click)
+if(point_in_rectangle(mouse_x, mouse_y, room_width/2-110, room_height/2+45, room_width/2+80, room_height/2+95)) &amp;&amp; (click)
 {
     room_goto(rm_about);
 }
