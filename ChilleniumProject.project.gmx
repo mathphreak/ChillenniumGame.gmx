@@ -24,6 +24,7 @@
     <background>background\About</background>
     <background>background\Opening_Screen</background>
     <background>background\lobby</background>
+    <background>background\Howto</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_1_2</path>
@@ -75,9 +76,11 @@
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_dead_ship</object>
     <object>objects\obj_cutscene</object>
+    <object>objects\obj_howto</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_howto</room>
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
