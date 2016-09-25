@@ -69,7 +69,15 @@ switch(currentRoom)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = 0;
+            <string>if path_index == -1 {
+    var next_angle = image_angle - 1;
+    if (image_angle &gt; 180) {
+        next_angle = image_angle + 1;
+    }
+    image_angle = clamp(next_angle, 0, 360);
+} else {
+    image_angle = direction;
+}
 </string>
           </argument>
         </arguments>
