@@ -81,15 +81,7 @@ choice_offered[3] = false;
           <argument>
             <kind>1</kind>
             <string>players = net_getPlayers();
-var choice = "Clean up"
-//if its player turn
-//determine whether current player is Sab
-// maybe also check if it's already messy/clean
-if(players[playerTurn, 5]){
-    choice = "Leave a mess"
-}
-else
-    choice = "Clean up"
+var choice = getActionLabel(playerTurn);
 
 var rooms = obj_shipData.rooms
     
@@ -179,6 +171,9 @@ if(net_allPlayersReady()){
         }
         else if(players[i,3] == "Leave a mess"){
             obj_shipData.rooms[currentRoom-1,0] = "messy"
+        }
+        else if(players[i,3] == obj_objective.coAction) {
+            obj_objective.coComplete = true;
         }
         else{
             if(players[i,3] == "Cockpit"){
@@ -296,20 +291,18 @@ if(net_allPlayersReady()){
     //redraw messy rooms num
     //make new random break room chance
         
-    if(playerTurn == 0) {
-        turns_elapsed++;
-        mess_chance = irandom(10)
-        //random room messy
-        if(mess_chance == 1){
-            random_room = irandom(5)
-            obj_shipData.rooms[random_room, 0] = "messy"
-        }
-        if(turns_elapsed == obj_shipData.turns_remaining){
-            alarm[0] = 300
-        }
+    turns_elapsed++;
+    mess_chance = irandom(10)
+    //random room messy
+    if(mess_chance == 1){
+        random_room = irandom(5)
+        obj_shipData.rooms[random_room, 0] = "messy"
+    }
+    if(turns_elapsed == obj_shipData.turns_remaining){
+        alarm[0] = 300
     }
 
-
+    obj_objective.doProcess = true;
 }
 
 

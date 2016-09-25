@@ -57,6 +57,7 @@
     <instance objName="obj_player_2" x="1408" y="416" name="inst_A5CADDAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_3" x="1408" y="544" name="inst_071D4E8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_4" x="1408" y="640" name="inst_5A9E511B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_objective" x="320" y="544" name="inst_650124CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

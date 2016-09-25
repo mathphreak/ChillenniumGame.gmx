@@ -55,6 +55,7 @@
     <script>scripts\music_next.gml</script>
     <script>scripts\getPlayerWithNumber.gml</script>
     <script>scripts\getRoomNeighbors.gml</script>
+    <script>scripts\getActionLabel.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
@@ -75,6 +76,7 @@
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_dead_ship</object>
     <object>objects\obj_cutscene</object>
+    <object>objects\obj_objective</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

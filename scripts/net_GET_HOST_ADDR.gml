@@ -1,1 +1,1 @@
-return "http://eww.matthorn.xyz";
+return "http://sic.matthorn.xyz";
