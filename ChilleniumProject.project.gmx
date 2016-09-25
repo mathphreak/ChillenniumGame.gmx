@@ -10,6 +10,7 @@
     <sound>sound\snd_EWW_Theme</sound>
     <sound>sound\snd_ding</sound>
     <sound>sound\snd_youWin</sound>
+    <sound>sound\snd_explode</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\NetTestSprite</sprite>
@@ -92,8 +93,8 @@
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
-    <room>rooms\rm_lost_game</room>
     <room>rooms\rm_won_game</room>
+    <room>rooms\rm_lost_game</room>
     <room>rooms\rm_cutscene</room>
   </rooms>
   <help>
