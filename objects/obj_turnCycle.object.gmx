@@ -164,6 +164,8 @@ if(players[playerTurn, 2]){
 
 //Everybody's gone once
 if(net_allPlayersReady()){
+    NetworkInfoBox.trust_ready = false;
+
     choice_offered[0] = false;
     choice_offered[1] = false;
     choice_offered[2] = false;
@@ -287,29 +289,28 @@ if(net_allPlayersReady()){
             }
         }
     }
-}
 
 
 
-//redraw ship health
-//redraw broken rooms num
-//make new random break room chance
-    
-if(playerTurn == 0) and net_allPlayersReady()
-{
-    turns_elapsed++;
-    break_chance = irandom(10)
-    //random room broken
-    if(break_chance == 1){
-        random_room = irandom(5)
-        obj_shipData.rooms[random_room, 0] = "broken"
+    //redraw ship health
+    //redraw broken rooms num
+    //make new random break room chance
+        
+    if(playerTurn == 0) {
+        turns_elapsed++;
+        break_chance = irandom(10)
+        //random room broken
+        if(break_chance == 1){
+            random_room = irandom(5)
+            obj_shipData.rooms[random_room, 0] = "broken"
+        }
+        if(turns_elapsed == obj_shipData.turns_remaining){
+            alarm[0] = 300
+        }
     }
-    if(turns_elapsed == obj_shipData.turns_remaining){
-        alarm[0] = 300
-    }
+
+
 }
-
-
 
 
 </string>
