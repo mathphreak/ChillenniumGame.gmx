@@ -80,7 +80,7 @@ if playerTurn + 1 == 1 &amp;&amp; !choice_offered[playerTurn] {
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        'You are in room ' + string(currentRoom) + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
         getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
@@ -93,7 +93,7 @@ if playerTurn + 1 == 2 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        'You are in room ' + string(currentRoom) + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
         getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
@@ -107,7 +107,7 @@ if playerTurn + 1 == 3 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        'You are in room ' + string(currentRoom) + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
         getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
@@ -120,7 +120,7 @@ if playerTurn + 1 == 4 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        'You are in room ' + string(currentRoom) + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
         getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
