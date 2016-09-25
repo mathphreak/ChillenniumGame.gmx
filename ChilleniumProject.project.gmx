@@ -34,6 +34,7 @@
     <sprite>sprites\spr_player_3</sprite>
     <sprite>sprites\spr_sprite_4</sprite>
     <sprite>sprites\spr_player_5</sprite>
+    <sprite>sprites\spr_dead_ship</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -85,12 +86,14 @@
     <object>objects\obj_player_4</object>
     <object>objects\obj_player_5</object>
     <object>objects\obj_sound_controller</object>
+    <object>objects\obj_dead_ship</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
+    <room>rooms\rm_lost_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
