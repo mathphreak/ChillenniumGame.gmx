@@ -72,7 +72,7 @@ var players = net_getPlayers();
 var playerCount = array_height_2d(players);
 var allReady = net_allPlayersReady();
 
-var canStart = (playerCount == 3 || playerCount == 5) &amp;&amp; allReady;
+var canStart = (playerCount == 4) &amp;&amp; allReady;
 
 if (canStart) {
     draw_set_alpha(1);
