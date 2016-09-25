@@ -32,7 +32,7 @@
 with(obj_event){
     instance_destroy();
 }
-alarm[0] = 180;
+alarm[0] = 300;
 </string>
           </argument>
         </arguments>
