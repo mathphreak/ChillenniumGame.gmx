@@ -31,6 +31,7 @@ ship_cleanliness = 10;
 objectives_completed = 0;
 turns_remaining = 30;
 doProcess = false;
+old_messy_number = 0;
 
 //Every room currently clean
 for (var i =0; i&lt;6; i+=1){
@@ -118,6 +119,11 @@ for (var i=0; i&lt;array_height_2d(rooms); i+=1){
     if(rooms[i,0] == "messy"){
         messy_number ++
     }
+}
+if(messy_number != old_messy_number)
+{
+    old_messy_number = messy_number;
+    audio_play_sound(snd_ding,5,false);
 }
 
 draw_text(x, y+20, "Rooms messy: " + string(messy_number))

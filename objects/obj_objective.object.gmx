@@ -94,6 +94,7 @@ doProcess = false
                 if (obj_shipData.rooms[currentRoom-1,0] == 'clean' &amp;&amp; coComplete) {
                     // Objective Complete!
                     obj_shipData.objectives_completed++;
+                    audio_play_sound(snd_ding,5,false);
                     if (obj_shipData.objectives_completed &gt;= 10) {
                         // you win
                         room_goto(rm_won_game);

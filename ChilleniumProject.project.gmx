@@ -8,6 +8,8 @@
   <sounds name="sound">
     <sound>sound\snd_warning</sound>
     <sound>sound\snd_EWW_Theme</sound>
+    <sound>sound\snd_ding</sound>
+    <sound>sound\snd_youWin</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\NetTestSprite</sprite>
@@ -79,6 +81,8 @@
     <object>objects\obj_cutscene</object>
     <object>objects\obj_objective</object>
     <object>objects\obj_howto</object>
+    <object>objects\obj_lostTheGame</object>
+    <object>objects\obj_wonTheGame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

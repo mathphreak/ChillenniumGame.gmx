@@ -292,6 +292,7 @@ if(net_allPlayersReady()){
     //make new random break room chance
         
     turns_elapsed++;
+    audio_play_sound(snd_ding,5,false);
     mess_chance = irandom(10)
     //random room messy
     if(mess_chance == 1){

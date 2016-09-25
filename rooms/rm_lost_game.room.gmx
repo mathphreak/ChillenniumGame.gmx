@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_dead_ship" x="448" y="448" name="inst_45494D0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lostTheGame" x="224" y="544" name="inst_DBA4E7E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
