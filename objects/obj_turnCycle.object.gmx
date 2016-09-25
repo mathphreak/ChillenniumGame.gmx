@@ -56,8 +56,9 @@ choice_offered[3] = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//room_goto(rm_lost_game)
+            <string>NetworkInfoBox.lossReason = "You ran out of turns!"
+room_goto(rm_lost_game);
+
 </string>
           </argument>
         </arguments>
