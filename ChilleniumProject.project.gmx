@@ -28,9 +28,20 @@
   <paths name="paths">
     <path>paths\pth_1_2</path>
     <path>paths\pth_1_3</path>
-    <path>paths\pth_3_5</path>
+    <path>paths\pth_1_4</path>
+    <path>paths\pth_2_1</path>
     <path>paths\pth_2_3</path>
     <path>paths\pth_2_4</path>
+    <path>paths\pth_3_1</path>
+    <path>paths\pth_3_2</path>
+    <path>paths\pth_3_4</path>
+    <path>paths\pth_3_5</path>
+    <path>paths\pth_4_1</path>
+    <path>paths\pth_4_2</path>
+    <path>paths\pth_4_3</path>
+    <path>paths\pth_4_6</path>
+    <path>paths\pth_5_3</path>
+    <path>paths\pth_6_4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\net_GET_HOST_ADDR.gml</script>

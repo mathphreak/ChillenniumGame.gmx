@@ -31,6 +31,10 @@ turns_elapsed = 0;
 //Random break chance
 break_chance = 0;
 random_room = 0;
+choice_offered[0] = false;
+choice_offered[1] = false;
+choice_offered[2] = false;
+choice_offered[3] = false;
 </string>
           </argument>
         </arguments>
@@ -65,41 +69,50 @@ else
     choice = "Fix"
 
 //player picks a room
-if playerTurn + 1 == 1{
+
+// don't offer a choice unless the player is still ready from last time
+if playerTurn + 1 == 1 &amp;&amp; !choice_offered[playerTurn] {
+    var currentPlayerType = getPlayerWithNumber(playerTurn);
+    var currentPlayer = instance_find(currentPlayerType, 0);
+    var currentRoom = currentPlayer.currentRoom;
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
-        getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
+        'You are in room ' + string(currentRoom),
+        getRoomNeighbors(currentRoom)
     )
+    choice_offered[playerTurn] = true;
 }
 
-if playerTurn + 1 == 2{
+if playerTurn + 1 == 2 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
         'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
         getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
     )
+    choice_offered[playerTurn] = true;
 }
 
 
-if playerTurn + 1 == 3{
+if playerTurn + 1 == 3 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
         'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
         getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
     )
+    choice_offered[playerTurn] = true;
 }
 
-if playerTurn + 1 == 4{
+if playerTurn + 1 == 4 &amp;&amp; !choice_offered[playerTurn]{
     net_offerChoice(
         players[playerTurn, 0],
         choice,
         'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
         getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
     )
+    choice_offered[playerTurn] = true;
 }
 
 
@@ -118,6 +131,10 @@ if(players[playerTurn, 2]){
 //Everybody's gone once
 if(net_allPlayersReady()){
     turns_elapsed += 1;
+    choice_offered[0] = false;
+    choice_offered[1] = false;
+    choice_offered[2] = false;
+    choice_offered[3] = false;
 }
 
 
