@@ -42,6 +42,8 @@ trust_ready = true;
 JOIN_URL = '';
 SHORTCODE = '';
 
+lossReason = '';
+
 </string>
           </argument>
         </arguments>
@@ -205,6 +207,10 @@ if room == rm_lost_game || room == rm_won_game {
         }
         draw_text(room_width / 3 + room_width / 4, 70 + 25 * i, mess);
     }
+}
+
+if (room == rm_lost_game) {
+    draw_text(room_width / 3, room_height / 2, lossReason);
 }
 
 </string>

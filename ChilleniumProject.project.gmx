@@ -22,6 +22,7 @@
     <sprite>sprites\spr_sprite_4</sprite>
     <sprite>sprites\spr_dead_ship</sprite>
     <sprite>sprites\spr_cutscene</sprite>
+    <sprite>sprites\spr_win</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -87,6 +88,7 @@
     <object>objects\obj_howto</object>
     <object>objects\obj_lostTheGame</object>
     <object>objects\obj_wonTheGame</object>
+    <object>objects\obj_win_game</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
