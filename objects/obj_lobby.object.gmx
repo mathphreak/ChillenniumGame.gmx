@@ -73,18 +73,14 @@ if(point_in_rectangle(mouse_x, mouse_y, room_width/2-170, room_height/2, room_wi
     room_goto(rm_mainMenu);
 }
 
+draw_set_color(c_green);
+
 // Do we have a valid number of players?
 var players = net_getPlayers();
 var playerCount = array_height_2d(players);
 var allReady = net_allPlayersReady();
 
 var canStart = (playerCount == 4) &amp;&amp; allReady;
-
-if (canStart) {
-    draw_set_alpha(1);
-} else {
-    draw_set_alpha(0.5);
-}
 
 //Player clicks start game
 if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
@@ -94,6 +90,11 @@ if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
         room_goto(rm_game)//add newgame object to nettestroom
         instance_destroy();
     }
+}
+else
+{
+    draw_set_color(c_black);
+    draw_rectangle(250,350,630,420,false);
 }
 
 
