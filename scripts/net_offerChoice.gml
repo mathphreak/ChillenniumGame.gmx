@@ -1,19 +1,17 @@
 // These arguments are important
 var playerID = argument0;
 var action = argument1;
-var neighbor1 = argument2;
-var neighbor2 = argument3;
-var neighbor3 = argument4;
-var neighbor4 = argument5;
+var infoHere = argument2;
+var neighbors = argument3;
 
 var ADDR = net_GET_HOST_ADDR();
 
 var message_map = ds_map_create();
 ds_map_add(message_map, 'action', action);
-ds_map_add(message_map, 'neighbor1', neighbor1);
-ds_map_add(message_map, 'neighbor2', neighbor2);
-ds_map_add(message_map, 'neighbor3', neighbor3);
-ds_map_add(message_map, 'neighbor4', neighbor4);
+ds_map_add(message_map, 'infoHere', infoHere);
+for (var i = 0; i < array_length_1d(neighbors); i++) {
+    ds_map_add(message_map, 'neighbor' + string(i + 1), neighbors[i]);
+}
 var header_map = ds_map_create();
 ds_map_add(header_map, "Content-Type", "application/json");
 with NetworkInfoBox {

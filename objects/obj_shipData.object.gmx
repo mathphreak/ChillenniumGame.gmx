@@ -67,16 +67,17 @@ for (var i = 0; i&lt;5; i+=1){
             <string>//check amount of broken rooms
 //only every 4th turn
 
-for (var i =0; i&lt;5; i+=1){
-    if(rooms[i,0] == "broken"){
-        //temporary
-        ship_health -= 1;
-    }
-    if(room[i,0] == "fixed"){
-        //also temporary
-        ship_health += 1;
-    }
-        
+if(net_allPlayersReady()){
+    for (var i =0; i&lt;5; i+=1){
+        if(rooms[i,0] == "broken"){
+            //temporary
+            ship_health -= 1;
+        }
+        if(room[i,0] == "fixed"){
+            //effictively stalls loss of hp
+        }
+    }   
+}     
 </string>
           </argument>
         </arguments>

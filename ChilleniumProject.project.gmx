@@ -57,6 +57,8 @@
     <script>scripts\net_offerChoice.gml</script>
     <script>scripts\net_allPlayersReady.gml</script>
     <script>scripts\music_next.gml</script>
+    <script>scripts\getPlayerWithNumber.gml</script>
+    <script>scripts\getRoomNeighbors.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
@@ -65,17 +67,10 @@
   </fonts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>
-    <object>objects\NetworkTester</object>
     <object>objects\obj_shipData</object>
-    <object>objects\obj_game_start</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\obj_lobby</object>
-    <object>objects\obj_event</object>
-    <object>objects\obj_warning</object>
-    <object>objects\obj_voting</object>
-    <object>objects\obj_cont_game</object>
     <object>objects\obj_about</object>
-    <object>objects\obj_voteTrans</object>
     <object>objects\obj_player_1</object>
     <object>objects\obj_player_2</object>
     <object>objects\obj_player_3</object>
