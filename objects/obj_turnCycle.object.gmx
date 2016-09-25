@@ -61,6 +61,8 @@ playerTurn = (playerTurn + 1) mod 4
 turns_elapsed += 1;
 //This may go in draw event
 if(playerTurn == 0)
+{
+}
     //redraw ship health
     //redraw broken rooms num
 
