@@ -1,9 +1,9 @@
 with NetworkInfoBox {
     var roles;
-    roles[0] = 'engineer';
-    roles[1] = 'scientist';
-    roles[2] = 'medic';
-    roles[3] = 'pilot';
+    roles[0] = 'Engineer';
+    roles[1] = 'Gunner';
+    roles[2] = 'Medic';
+    roles[3] = 'Pilot';
     for (var i = 0; i < array_height_2d(players); i++) {
         var j = irandom(i);
         if j != i {

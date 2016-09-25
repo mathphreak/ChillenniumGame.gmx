@@ -74,6 +74,7 @@
     <object>objects\obj_turnCycle</object>
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_dead_ship</object>
+    <object>objects\obj_cutscene</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
@@ -81,6 +82,7 @@
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
     <room>rooms\rm_lost_game</room>
+    <room>rooms\rm_cutscene</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

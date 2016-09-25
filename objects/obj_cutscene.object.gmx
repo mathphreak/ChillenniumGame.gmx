@@ -25,40 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize data
-//(these values will probbaly change)
-ship_health = 10;
-turns_remaining = 10;
-
-//Every room currently fixed
-for (var i =0; i&lt;6; i+=1){
-    rooms[i,0] = "fixed"
-}
-
-//No player can see into room to begin
-for (var i = 0; i&lt;6; i+=1){
-    switch(i){
-        case 0:
-            rooms[i, 1] = "the Cockpit";
-            break;
-        case 1:
-            rooms[i, 1] = "Weapons Storage";
-            break;
-        case 2:
-            rooms[i, 1] = "the Medical Bay";
-            break;
-        case 3:
-            rooms[i, 1] = "Food Supply";
-            break;
-        case 4:
-            rooms[i, 1] = "Engine Room 1";
-            break;
-        case 5:
-            rooms[i, 1] = "Engine Room 2";
-            break;
-    }
-}
-
+            <string>timer = 0;
+message = ""
 </string>
           </argument>
         </arguments>
@@ -81,43 +49,10 @@ for (var i = 0; i&lt;6; i+=1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//check amount of broken rooms
-//only every 4th turn
-
-if(net_allPlayersReady()){
-    for (var i =0; i&lt;6; i+=1){
-        if(rooms[i,0] == "broken"){
-            //temporary
-            ship_health -= 1;
-        }
-        if(room[i,0] == "fixed"){
-            //effictively stalls loss of hp
-        }
-    }   
-}     
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_text(x,y,ship_health)
+            <string>//timer +=1
+//switch(timer0{
+   // case 300:
+        
 </string>
           </argument>
         </arguments>
