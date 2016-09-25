@@ -64,6 +64,8 @@
     <font>fonts\fnt_title</font>
     <font>fonts\fnt_menus</font>
     <font>fonts\fnt_warning</font>
+    <font>fonts\fnt_stats</font>
+    <font>fonts\fnt_objective</font>
   </fonts>
   <objects name="objects">
     <object>objects\NetworkInfoBox</object>

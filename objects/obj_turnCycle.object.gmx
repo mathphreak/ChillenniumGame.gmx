@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>randomize();
-playerTurn = 1;
 turns_elapsed = 0;
 //Random break chance
 mess_chance = 0;
@@ -57,7 +56,8 @@ choice_offered[3] = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//room_goto(rm_lost_game)
+            <string>
+//room_goto(rm_lost_game)
 </string>
           </argument>
         </arguments>
@@ -81,78 +81,33 @@ choice_offered[3] = false;
           <argument>
             <kind>1</kind>
             <string>players = net_getPlayers();
-var choice = getActionLabel(playerTurn);
 
 var rooms = obj_shipData.rooms
     
 //player picks a room
 
 // don't offer a choice unless the player is still ready from last time
-if playerTurn + 1 == 1 &amp;&amp; !choice_offered[playerTurn] {
-    var currentPlayerType = getPlayerWithNumber(playerTurn);
-    var currentPlayer = instance_find(currentPlayerType, 0);
-    var currentRoom = currentPlayer.currentRoom;
-    net_offerChoice(
-        players[playerTurn, 0],
-        choice,
-        'You are in ' + obj_shipData.rooms[currentRoom-1,1] + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
-        getRoomNeighbors(currentRoom)
-    )
-    choice_offered[playerTurn] = true;
+for (var i = 0; i &lt; 4; i++) {
+    if !choice_offered[i] {
+        var choice = getActionLabel(i);
+        var currentPlayerType = getPlayerWithNumber(i);
+        var currentPlayer = instance_find(currentPlayerType, 0);
+        var currentRoom = currentPlayer.currentRoom;
+        net_offerChoice(
+            players[i, 0],
+            choice,
+            'You are in ' + obj_shipData.rooms[currentRoom-1,1] + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
+            getRoomNeighbors(currentRoom)
+        )
+        choice_offered[i] = true;
+    }
 }
-
-if playerTurn + 1 == 2 &amp;&amp; !choice_offered[playerTurn]{
-    var currentPlayerType = getPlayerWithNumber(playerTurn);
-    var currentPlayer = instance_find(currentPlayerType, 0);
-    var currentRoom = currentPlayer.currentRoom;
-    net_offerChoice(
-        players[playerTurn, 0],
-        choice,
-        'You are in ' + obj_shipData.rooms[currentRoom-1,1] + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
-        getRoomNeighbors(currentRoom)
-    )
-    choice_offered[playerTurn] = true;
-}
-
-
-if playerTurn + 1 == 3 &amp;&amp; !choice_offered[playerTurn]{
-    var currentPlayerType = getPlayerWithNumber(playerTurn);
-    var currentPlayer = instance_find(currentPlayerType, 0);
-    var currentRoom = currentPlayer.currentRoom;
-    net_offerChoice(
-        players[playerTurn, 0],
-        choice,
-        'You are in ' + obj_shipData.rooms[currentRoom-1,1] + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
-        getRoomNeighbors(currentRoom)
-    )
-    choice_offered[playerTurn] = true;
-}
-
-if playerTurn + 1 == 4 &amp;&amp; !choice_offered[playerTurn]{
-    var currentPlayerType = getPlayerWithNumber(playerTurn);
-    var currentPlayer = instance_find(currentPlayerType, 0);
-    var currentRoom = currentPlayer.currentRoom;
-    net_offerChoice(
-        players[playerTurn, 0],
-        choice,
-        'You are in ' + obj_shipData.rooms[currentRoom-1,1] + " and it is currently " + obj_shipData.rooms[currentRoom-1,0],
-        getRoomNeighbors(currentRoom)
-    )
-    choice_offered[playerTurn] = true;
-}
-
-
     
 //room status changes to player
 //attempt to take action (if clean or not clean)
 //if succeed, room changes
 //update total messy room state
 //end turn, repeat
-
-//Player finished their turn
-if(players[playerTurn, 2]){
-    playerTurn = (playerTurn + 1) mod 4 
-}
 
 //Everybody's gone once
 if(net_allPlayersReady()){

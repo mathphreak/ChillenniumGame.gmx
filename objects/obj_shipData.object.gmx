@@ -112,7 +112,10 @@ if(doProcess){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x,y,"Ship Cleanliness: " + string(ship_cleanliness))
+            <string>draw_set_font(fnt_stats)
+draw_set_halign(fa_left)
+draw_set_color(c_white)
+draw_text(x,y,"Ship Cleanliness: " + string(ship_cleanliness))
 
 var messy_number=0;
 for (var i=0; i&lt;array_height_2d(rooms); i+=1){
@@ -126,9 +129,9 @@ if(messy_number != old_messy_number)
     audio_play_sound(snd_ding,5,false);
 }
 
-draw_text(x, y+20, "Rooms messy: " + string(messy_number))
-draw_text(x, y+40, "Turns left:" +string((turns_remaining -(obj_turnCycle.turns_elapsed))))
-draw_text(x, y+60, "Objectives completed:" +string(objectives_completed) + "/10")
+draw_text(x, y+40, "Rooms messy: " + string(messy_number))
+draw_text(x, y+80, "Turns left: " +string((turns_remaining -(obj_turnCycle.turns_elapsed))))
+draw_text(x, y+120, "Objectives completed: " +string(objectives_completed) + "/10")
 
 </string>
           </argument>

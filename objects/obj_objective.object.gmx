@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>objectives[0,0] = "Engine 1 faliure!"
+            <string>objectives[0,0] = "Engine 1 failure!"
 objectives[0,1] = "Engineer"
 objectives[0,2] = 5
 objectives[0,3] = "Perform Engine Check"
 
-objectives[1,0] = "Ironically, the Medic has the flu."
+objectives[1,0] = "Ironically, the Medic #has the flu."
 objectives[1,1] = "Medic"
 objectives[1,2] = 3
 objectives[1,3] = "Take some Tylenol"
@@ -40,10 +40,10 @@ objectives[2,1] = "Gunner"
 objectives[2,2] = 2
 objectives[2,3] = "Count all the weapons"
 
-objectives[3,0] = "Take weapon inventory"
-objectives[3,1] = "Gunner"
-objectives[3,2] = 2
-objectives[3,3] = "Count all the weapons"
+objectives[3,0] = "Take medical inventory"
+objectives[3,1] = "Medic"
+objectives[3,2] = 3
+objectives[3,3] = "Count all the pills"
 
 objectives[4,0] = "Pilot has a cold!"
 objectives[4,1] = "Pilot"
@@ -65,12 +65,12 @@ objectives[7,1] = "Pilot"
 objectives[7,2] = 1
 objectives[7,3] = "Crank open TurboTax"
 
-objectives[8,0] = "Medic has to sign a doctor's note"
+objectives[8,0] = "Medic has to sign a #doctor's note"
 objectives[8,1] = "Medic"
 objectives[8,2] = 3
 objectives[8,3] = "Scribble some letters"
 
-objectives[9,0] = "Gunner needs to renew his weapons licence"
+objectives[9,0] = "Gunner needs to renew his #weapons licence"
 objectives[9,1] = "Gunner"
 objectives[9,2] = 2
 objectives[9,3] = "Sign the weapons license"
@@ -125,12 +125,12 @@ objectives[18,1] = "Engineer"
 objectives[18,2] = 1
 objectives[18,3] = "Turn it off, and back on again."
 
-objectives[19,0] = "Gunner lost his cat in a Engine Room"
+objectives[19,0] = "Gunner lost his cat in #a Engine Room"
 objectives[19,1] = "Gunner"
 objectives[19,2] = 6
 objectives[19,3] = "Here kitty kitty kitty!"
 
-objectives[20,0] = "Pilot must perform an engine check"
+objectives[20,0] = "Pilot must perform an #engine check"
 objectives[20,1] = "Pilot"
 objectives[20,2] = 6
 objectives[20,3] = "Check said engines"
@@ -228,7 +228,10 @@ doProcess = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y, objectives[currentObjective, 0]);
+            <string>draw_set_font(fnt_objective)
+draw_set_halign(fa_center)
+draw_set_color(c_white)
+draw_text(x, y, objectives[currentObjective, 0]);
 </string>
           </argument>
         </arguments>

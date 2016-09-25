@@ -175,7 +175,7 @@ if(room == rm_lobby)
     draw_text(512, 30, urlString);
 }
 if (room == rm_lobby || room == rm_game) {
-    draw_text(912, 30, readyString);
+    draw_text_color(room_width-150, 30, readyString, c_white, c_white, c_white, c_white,1);
 }
 var players = net_getPlayers();
 if room == rm_lobby &amp;&amp; players[0,0] != '' {
