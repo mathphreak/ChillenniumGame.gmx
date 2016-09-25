@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currentRoom = round(random(6))
+            <string>currentRoom = irandom(5)
 switch(currentRoom)
 {
     case 0:

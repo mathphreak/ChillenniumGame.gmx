@@ -68,6 +68,8 @@ if(players[playerTurn, 5]){
 else
     choice = "Fix"
 
+var rooms = obj_shipData.rooms
+    
 //player picks a room
 
 // don't offer a choice unless the player is still ready from last time
@@ -78,39 +80,48 @@ if playerTurn + 1 == 1 &amp;&amp; !choice_offered[playerTurn] {
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(currentRoom),
+        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
         getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
 }
 
 if playerTurn + 1 == 2 &amp;&amp; !choice_offered[playerTurn]{
+    var currentPlayerType = getPlayerWithNumber(playerTurn);
+    var currentPlayer = instance_find(currentPlayerType, 0);
+    var currentRoom = currentPlayer.currentRoom;
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
-        getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
+        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
 }
 
 
 if playerTurn + 1 == 3 &amp;&amp; !choice_offered[playerTurn]{
+    var currentPlayerType = getPlayerWithNumber(playerTurn);
+    var currentPlayer = instance_find(currentPlayerType, 0);
+    var currentRoom = currentPlayer.currentRoom;
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
-        getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
+        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
 }
 
 if playerTurn + 1 == 4 &amp;&amp; !choice_offered[playerTurn]{
+    var currentPlayerType = getPlayerWithNumber(playerTurn);
+    var currentPlayer = instance_find(currentPlayerType, 0);
+    var currentRoom = currentPlayer.currentRoom;
     net_offerChoice(
         players[playerTurn, 0],
         choice,
-        'You are in room ' + string(getPlayerWithNumber(playerTurn).currentRoom),
-        getRoomNeighbors(getPlayerWithNumber(playerTurn).currentRoom)
+        'You are in room ' + string(currentRoom) + " and it is currently " + rooms[currentRoom,0],
+        getRoomNeighbors(currentRoom)
     )
     choice_offered[playerTurn] = true;
 }
@@ -135,8 +146,120 @@ if(net_allPlayersReady()){
     choice_offered[1] = false;
     choice_offered[2] = false;
     choice_offered[3] = false;
+    for (var i=0; i&lt; array_height_2d(players); i+=1){
+        var currentPlayerType = getPlayerWithNumber(i);
+        var currentPlayer = instance_find(currentPlayerType, 0);
+        var currentRoom = currentPlayer.currentRoom;
+        if(players[i, 3] == "Fix"){
+            obj_shipData.rooms[currentRoom,0] = "fixed"
+        }
+        else if(players[i,3] == "Break"){
+            obj_shipData.rooms[currentRoom,0] = "fixed"
+        }
+        else{
+            if(players[i,3] == "Room 1"){
+                switch(currentRoom){
+                    case 1:
+                        with(currentPlayer)
+                            path_start(pth_1_2, 4, path_action_stop, true)
+                        break;
+                    case 2:
+                        with(currentPlayer)
+                            path_start(pth_1_3, 4, path_action_stop, true)
+                        break;
+                    case 3:
+                        with(currentPlayer)
+                            path_start(pth_1_4, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if(players[i,3] == "Room 2"){
+                switch(currentRoom){
+                    case 1:
+                        with(currentPlayer)
+                            path_start(pth_2_1, 4, path_action_stop, true)
+                        break;
+                    case 3:
+                        with(currentPlayer)
+                            path_start(pth_2_3, 4, path_action_stop, true)
+                        break;
+                    case 4:
+                        with(currentPlayer)
+                            path_start(pth_2_4, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if(players[i,3] == "Room 3"){
+                switch(currentRoom){
+                    case 1:
+                        with(currentPlayer)
+                            path_start(pth_3_1, 4, path_action_stop, true)
+                        break;
+                    case 2:
+                        with(currentPlayer)
+                            path_start(pth_3_2, 4, path_action_stop, true)
+                        break;
+                    case 4:
+                        with(currentPlayer)
+                            path_start(pth_1_4, 4, path_action_stop, true)
+                        break;
+                    case 5:
+                        with(currentPlayer)
+                            path_start(pth_3_5, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if(players[i,3] == "Room 4"){
+                switch(currentRoom){
+                    case 1:
+                        with(currentPlayer)
+                            path_start(pth_4_1, 4, path_action_stop, true)
+                        break;
+                    case 2:
+                        with(currentPlayer)
+                            path_start(pth_4_2, 4, path_action_stop, true)
+                        break;
+                    case 3:
+                        with(currentPlayer)
+                            path_start(pth_4_3, 4, path_action_stop, true)
+                        break;
+                    case 6:
+                        with(currentPlayer)
+                            path_start(pth_4_6, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if(players[i,3] == "Room 5"){
+                switch(currentRoom){
+                    case 3:
+                        with(currentPlayer)
+                            path_start(pth_5_3, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if(players[i,3] == "Room 6"){
+                switch(currentRoom){
+                    case 4:
+                        with(currentPlayer)
+                            path_start(pth_6_4, 4, path_action_stop, true)
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
 }
-
 
 //redraw ship health
 //redraw broken rooms num
@@ -144,10 +267,10 @@ if(net_allPlayersReady()){
     
 if(playerTurn == 0)
 {
-    break_chance = round(random(10))
+    break_chance = irandom(9)
     //random room broken
     if(break_chance == 1){
-        random_room = round(random(6))
+        random_room = irandom(5)
         rooms[random_room, 0] = "broken"
     }
 }

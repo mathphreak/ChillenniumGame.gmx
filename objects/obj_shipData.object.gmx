@@ -31,13 +31,13 @@ ship_health = 10;
 turns_remaining = 10;
 
 //Every room currently fixed
-for (var i =0; i&lt;5; i+=1){
+for (var i =0; i&lt;6; i+=1){
     rooms[i,0] = "fixed"
 }
 
 //No player can see into room to begin
-for (var i = 0; i&lt;5; i+=1){
-    for (var j = 1; j&lt;5; j+=1){
+for (var i = 0; i&lt;6; i+=1){
+    for (var j = 1; j&lt;6; j+=1){
         rooms[i,j] = "hidden"
     }
 }
