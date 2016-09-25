@@ -91,7 +91,7 @@ if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
         instance_destroy();
     }
 }
-else
+else if(!canStart)
 {
     draw_set_color(c_black);
     draw_rectangle(250,350,630,420,false);
