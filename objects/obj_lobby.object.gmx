@@ -87,7 +87,7 @@ if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
     if(mouse_check_button_pressed(mb_left)){
         NetworkInfoBox.trust_ready = false;
         net_distributeRoles();
-        room_goto(rm_game)//add newgame object to nettestroom
+        room_goto(rm_cutscene)//add newgame object to nettestroom
         instance_destroy();
     }
 }
