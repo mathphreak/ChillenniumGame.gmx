@@ -26,14 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>click = mouse_check_button_pressed(mb_left);
-if(point_in_rectangle(mouse_x,mouse_y,room_width/2 - 80,room_height/2-45,room_width/2+80,room_height/2 + 5)) &amp;&amp; (click)
+
+if(point_in_rectangle(mouse_x, mouse_y, room_width/2-175, room_height/2-50, room_width/2+175, room_height/2+10)) &amp;&amp; (click)
 {
     room_goto(rm_lobby);
 }
-if(point_in_rectangle(mouse_x,mouse_y,room_width/2 - 50,room_height/2 + 65,room_width/2+50,room_height/2 + 105)) &amp;&amp; (click)
+
+if(point_in_rectangle(mouse_x, mouse_y, room_width/2-90, room_height/2+75, room_width/2+80, room_height/2+125)) &amp;&amp; (click)
 {
     room_goto(rm_about);
 }
+
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 </string>
