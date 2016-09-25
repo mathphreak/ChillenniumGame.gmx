@@ -10,7 +10,6 @@
     <sound>sound\snd_voting_music</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
     <sprite>sprites\spr_test_player</sprite>
     <sprite>sprites\spr_warning</sprite>
@@ -18,7 +17,6 @@
     <sprite>sprites\spr_player_2</sprite>
     <sprite>sprites\spr_player_3</sprite>
     <sprite>sprites\spr_sprite_4</sprite>
-    <sprite>sprites\spr_player_5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -67,7 +65,7 @@
     <object>objects\obj_player_2</object>
     <object>objects\obj_player_3</object>
     <object>objects\obj_player_4</object>
-    <object>objects\obj_player_5</object>
+    <object>objects\obj_turnCycle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
