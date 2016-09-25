@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>LOADING = true;
-r_str = "Creating lobby...";
+urlString = "Creating lobby...";
+readyString = "0/0 ready";
 alarm[0] = 60;
 // IMPORTANT:
 // Player = [ID, Name, Ready, Choice, Role, Messmaker?]
@@ -166,9 +167,12 @@ trust_ready = true;
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_green);
-if(room &lt; 2)
+if(room == rm_lobby)
 {
-draw_text(512, 30, r_str);
+    draw_text(512, 30, urlString);
+}
+if (room == rm_lobby || room == rm_game) {
+    draw_text(912, 30, readyString);
 }
 var players = net_getPlayers();
 if room == rm_lobby &amp;&amp; players[0,0] != '' {
@@ -188,6 +192,31 @@ if room == rm_lobby &amp;&amp; players[0,0] != '' {
     }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (room != rm_mainMenu) {
+    room_goto(rm_mainMenu);
+}
 </string>
           </argument>
         </arguments>

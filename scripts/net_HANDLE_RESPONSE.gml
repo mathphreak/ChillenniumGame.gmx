@@ -10,7 +10,8 @@ if ds_map_find_value(async_load, "status") == 0 {
             LOADING = false;
         } else if message == "game-heartbeat" {
             var ready = ds_map_find_value(json, "ready");
-            r_str = "Join at " + JOIN_URL + " (" + ready + " ready)";
+            urlString = "Join at " + JOIN_URL;
+            readyString = ready + " ready";
             LOADING = false;
             var list = ds_map_find_value(json, "players");
             var size = ds_list_size(list);

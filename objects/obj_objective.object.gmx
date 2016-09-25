@@ -25,20 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>objectives[0,0] = "Objective 1 Pilot to Cockpit"
-objectives[0,1] = "Pilot"
-objectives[0,2] = 1
-objectives[0,3] = "Do Pilot Thing"
+            <string>objectives[0,0] = "Engine 1 faliure!"
+objectives[0,1] = "Engineer"
+objectives[0,2] = 5
+objectives[0,3] = "Perform Engine Check"
 
-objectives[1,0] = "Objective 2 Medic to Medical Bay"
+objectives[1,0] = "Ironically, the Medic has the flu."
 objectives[1,1] = "Medic"
 objectives[1,2] = 3
-objectives[1,3] = "Do Medic Thing"
+objectives[1,3] = "Take some Tylenol"
 
-objectives[2,0] = "Objective 3 Gunner to Cockpit"
+objectives[2,0] = "Take weapon inventory"
 objectives[2,1] = "Gunner"
-objectives[2,2] = 3
-objectives[2,3] = "Do Gunner Thing"
+objectives[2,2] = 2
+objectives[2,3] = "Count all the weapons"
+
+objectives[3,0] = "Take weapon inventory"
+objectives[3,1] = "Gunner"
+objectives[3,2] = 2
+objectives[3,3] = "Count all the weapons"
 
 currentObjective = irandom(array_height_2d(objectives) - 1);
 // Current Objective Role
