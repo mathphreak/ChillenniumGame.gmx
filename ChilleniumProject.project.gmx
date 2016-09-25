@@ -25,7 +25,6 @@
     <sound>sound\snd_Outro</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\space_ship</sprite>
     <sprite>sprites\NetTestSprite</sprite>
     <sprite>sprites\spr_test_player</sprite>
     <sprite>sprites\spr_warning</sprite>
@@ -33,8 +32,11 @@
     <sprite>sprites\spr_player_2</sprite>
     <sprite>sprites\spr_player_3</sprite>
     <sprite>sprites\spr_sprite_4</sprite>
+<<<<<<< HEAD
     <sprite>sprites\spr_player_5</sprite>
     <sprite>sprites\spr_dead_ship</sprite>
+=======
+>>>>>>> b8054c5f89ea3cdda123c49d43c5c2d93b360807
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -84,7 +86,7 @@
     <object>objects\obj_player_2</object>
     <object>objects\obj_player_3</object>
     <object>objects\obj_player_4</object>
-    <object>objects\obj_player_5</object>
+    <object>objects\obj_turnCycle</object>
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_dead_ship</object>
   </objects>

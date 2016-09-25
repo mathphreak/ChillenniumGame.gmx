@@ -25,21 +25,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize data
-ship_health = 10;
-turns_remaining = 10;
-
-//Every room currently fixed
-for (var i =0; i&lt;5; i+=1){
-    rooms[i,0] = "fixed"
+            <string>playerTurn = 1;
+turns_elapsed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//if its player turn
+while turns_elapsed &lt;= obj_shipData.turns_remaining{
+//player picks a room
+//room status changes to player
+//attempt to take action (if fixed or not fixed)
+//if succeed, room changes
+//update total broken room state
+//end turn, repeat
+playerTurn = (playerTurn + 1) mod 4 
+turns_elapsed += 1;
+//This may go in draw event
+if(playerTurn == 0)
+    //redraw ship health
+    //redraw broken rooms num
 }
 
-//No player can see into room to begin
-for (var i = 0; i&lt;5; i+=1){
-    for (var j = 1; j&lt;5; j+=1){
-        rooms[i,j] = "hidden"
-    }
-}
+
+//end of turn cycle
+//update ship health
+//repeat cycle
 
 </string>
           </argument>

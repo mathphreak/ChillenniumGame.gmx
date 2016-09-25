@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currentLocation = 3;
-is_voting = true;
+            <string>currentRoom = -1;
+currentRole = "none"
+
 </string>
           </argument>
         </arguments>
