@@ -80,13 +80,8 @@ if (canStart) {
     draw_set_alpha(0.5);
 }
 
-//Draw menu stuff
-draw_set_font(fnt_menus)
-draw_text(room_width/2, room_height*.59, "Start Game");
-draw_rectangle(375,515,520,550, true);
-
 //Player clicks start game
-if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 375,515,520,550)){
+if (canStart &amp;&amp; point_in_rectangle(mouse_x, mouse_y, 250,350,630,420)){
     if(mouse_check_button_pressed(mb_left)){
         net_distributeRoles();
         net_setStateWaiting();

@@ -31,6 +31,7 @@ vote2_count = 0;
 vote3_count = 0;
 vote4_count = 0;
 vote5_count = 0;
+message_gate = false;
 action_selected = false;
 actor_selected = false;
 choice_propagated = false;
@@ -42,13 +43,13 @@ numPlayers = array_height_2d(players)
 net_offerChoice(
     'What do you want to do?',
     obj_event.c1_text,
-    obj_event.c1_text + " sabatoge",
+    obj_event.c1_text + "  -  Damage ship health",
     obj_event.c2_text,
-    obj_event.c2_text + " specialist",
+    obj_event.c2_text + "  -  Specialist event",
     obj_event.c3_text,
-    obj_event.c3_text + " nothing",
+    obj_event.c3_text + "  -  Nothing happens",
     obj_event.c4_text,
-    obj_event.c4_text + " benefit",
+    obj_event.c4_text + "  -  Mission advance",
     '',
     ''
 );
@@ -92,7 +93,8 @@ if(net_allPlayersReady()) &amp;&amp; !action_selected{
     }
     if (winningIndex == 1) {
         action_selected = true;
-        choice_propagated = false;    
+        choice_propagated = false;
+        message_gate = true;   
     }
     if (winningIndex == 2) {
         ai_message = ini_read_string("a3",string(obj_event.index),"");
@@ -158,16 +160,16 @@ if(net_allPlayersReady()) &amp;&amp; action_selected &amp;&amp; choice_propagate
         {
             ai_message = ini_read_string("a2-1",string(obj_event.index),"");
         }
-        else
+        else if(message_gate)
         {
             ai_message = ini_read_string("a2-2",string(obj_event.index),"");
+            message_gate = false;
         }
         net_setStateWaiting();
     }
-    instance_create(x,y,obj_voteTrans);
     global.message = ai_message;
+    instance_create(x,y,obj_voteTrans);
 }
-        
 
 </string>
           </argument>
