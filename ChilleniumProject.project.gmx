@@ -32,11 +32,7 @@
     <sprite>sprites\spr_player_2</sprite>
     <sprite>sprites\spr_player_3</sprite>
     <sprite>sprites\spr_sprite_4</sprite>
-<<<<<<< HEAD
-    <sprite>sprites\spr_player_5</sprite>
     <sprite>sprites\spr_dead_ship</sprite>
-=======
->>>>>>> b8054c5f89ea3cdda123c49d43c5c2d93b360807
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
