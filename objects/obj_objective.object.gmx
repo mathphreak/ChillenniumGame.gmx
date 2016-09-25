@@ -45,6 +45,99 @@ objectives[3,1] = "Gunner"
 objectives[3,2] = 2
 objectives[3,3] = "Count all the weapons"
 
+objectives[4,0] = "Pilot has a cold!"
+objectives[4,1] = "Pilot"
+objectives[4,2] = 3
+objectives[4,3] = "Take some cold medicine"
+
+objectives[5,0] = "Gunner has a cold!"
+objectives[5,1] = "Gunner"
+objectives[5,2] = 3
+objectives[5,3] = "Take some cold medicine"
+
+objectives[6,0] = "Engineer has a cold!"
+objectives[6,1] = "Engineer"
+objectives[6,2] = 3
+objectives[6,3] = "Take some cold medicine"
+
+objectives[7,0] = "Pilot has taxes to fill"
+objectives[7,1] = "Pilot"
+objectives[7,2] = 1
+objectives[7,3] = "Crank open TurboTax"
+
+objectives[8,0] = "Medic has to sign a doctor's note"
+objectives[8,1] = "Medic"
+objectives[8,2] = 3
+objectives[8,3] = "Scribble some letters"
+
+objectives[9,0] = "Gunner needs to renew his weapons licence"
+objectives[9,1] = "Gunner"
+objectives[9,2] = 2
+objectives[9,3] = "Sign the weapons license"
+
+objectives[10,0] = "It's Gunner's snack time!"
+objectives[10,1] = "Gunner"
+objectives[10,2] = 4
+objectives[10,3] = "Eat some Snickers"
+
+objectives[11,0] = "It's Pilot's snack time!"
+objectives[11,1] = "Pilot"
+objectives[11,2] = 4
+objectives[11,3] = "Eat some Cheetos"
+
+objectives[12,0] = "Its Medic's snack time!"
+objectives[12,1] = "Medic"
+objectives[12,2] = 4
+objectives[12,3] = "Eat some Cheerios"
+
+objectives[13,0] = "Warning: Weapon Malfunction."
+objectives[13,1] = "Gunner"
+objectives[13,2] = 2
+objectives[13,3] = "Recalibrate turrets"
+
+objectives[13,0] = "Set new flight path"
+objectives[13,1] = "Pilot"
+objectives[13,2] = 1
+objectives[13,3] = "Set course for the Moon"
+
+objectives[14,0] = "We're out of medicine!"
+objectives[14,1] = "Medic"
+objectives[14,2] = 3
+objectives[14,3] = "Make another medicine order"
+
+objectives[15,0] = "WE NEED MORE POWER"
+objectives[15,1] = "Engineer"
+objectives[15,2] = 5
+objectives[15,3] = "ADD POWER"
+
+objectives[16,0] = "Its Engineer's snack time!"
+objectives[16,1] = "Engineer"
+objectives[16,2] = 4
+objectives[16,3] = "Eat some pretzels"
+
+objectives[17,0] = "Need to download more RAM"
+objectives[17,1] = "Engineer"
+objectives[17,2] = 1
+objectives[17,3] = "Go to downloadmoreRAM.com"
+
+objectives[18,0] = "Systems must be rebooted"
+objectives[18,1] = "Engineer"
+objectives[18,2] = 1
+objectives[18,3] = "Turn it off, and back on again."
+
+objectives[19,0] = "Gunner lost his cat in a Engine Room"
+objectives[19,1] = "Gunner"
+objectives[19,2] = 6
+objectives[19,3] = "Here kitty kitty kitty!"
+
+objectives[20,0] = "Pilot must perform an engine check"
+objectives[20,1] = "Pilot"
+objectives[20,2] = 6
+objectives[20,3] = "Check said engines"
+
+
+
+
 currentObjective = irandom(array_height_2d(objectives) - 1);
 // Current Objective Role
 coRole = objectives[currentObjective,1];
