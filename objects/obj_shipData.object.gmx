@@ -27,12 +27,12 @@
             <kind>1</kind>
             <string>//Initialize data
 //(these values will probbaly change)
-ship_health = 10;
+ship_cleanliness = 10;
 turns_remaining = 10;
 
-//Every room currently fixed
+//Every room currently clean
 for (var i =0; i&lt;6; i+=1){
-    rooms[i,0] = "fixed"
+    rooms[i,0] = "clean"
 }
 rooms[0, 1] = "the Cockpit";
 rooms[1, 1] = "Weapons Storage";
@@ -65,16 +65,16 @@ rooms[5, 1] = "Engine Room 2";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//check amount of broken rooms
+            <string>//check amount of messy rooms
 //only every 4th turn
 
 if(net_allPlayersReady()){
     for (var i =0; i&lt;6; i+=1){
-        if(rooms[i,0] == "broken"){
+        if(rooms[i,0] == "messy"){
             //temporary
-            ship_health -= 1;
+            ship_cleanliness -= 1;
         }
-        if(room[i,0] == "fixed"){
+        if(room[i,0] == "clean"){
             //effictively stalls loss of hp
         }
     }   
@@ -101,17 +101,17 @@ if(net_allPlayersReady()){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x,y,ship_health)
+            <string>draw_text(x,y,"Ship Cleanliness: " + string(ship_cleanliness))
 
-var broken_number=0;
+var messy_number=0;
 for (var i=0; i&lt;array_height_2d(rooms); i+=1){
-    if(rooms[i,0] == "broken"){
-        broken_number ++
+    if(rooms[i,0] == "messy"){
+        messy_number ++
     }
 }
 
-draw_text(x, y+20, broken_number)
-draw_text(x, y+40, obj_turnCycle.turns_elapsed)
+draw_text(x, y+20, "Rooms messy: " + string(messy_number))
+draw_text(x, y+40, "Turns left:" +string((turns_remaining -(obj_turnCycle.turns_elapsed))))
 
 </string>
           </argument>

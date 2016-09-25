@@ -29,7 +29,7 @@
 r_str = "Creating lobby...";
 alarm[0] = 60;
 // IMPORTANT:
-// Player = [ID, Name, Ready, Choice, Role, Saboteur?]
+// Player = [ID, Name, Ready, Choice, Role, Messmaker?]
 players[0,0] = '';
 players[0,1] = '';
 players[0,2] = false;

@@ -20,20 +20,26 @@ with NetworkInfoBox {
     
     var ADDR = net_GET_HOST_ADDR();
     
-    var saboteurIdx = irandom(array_height_2d(players));
-    players[saboteurIdx, 5] = true;
+    var messmakerIdx = irandom(array_height_2d(players) - 1);
+    players[messmakerIdx, 5] = true;
 
     for (var i = 0; i < array_height_2d(players); i++) {
         var playerID = players[i, 0];
         var role = players[i, 4];
-        var isSaboteur = 'false';
+        var isMessmaker = 'false';
         if (players[i, 5]) {
-            isSaboteur = 'true';
+            isMessmaker = 'true';
         }
         
-        var url = ADDR + '/game/' + SHORTCODE + '/players/' + playerID;
+        if (!is_string(playerID)) {
+            var test = 'test';
+        }
+        
+        var url = ADDR;
+        url = url + '/game/' + SHORTCODE;
+        url = url + '/players/' + playerID;
         var body = 'role=' + role;
-        body = body + '&saboteur=' + isSaboteur;
+        body = body + '&messmaker=' + isMessmaker;
         body = body + '&color=' + colors[i];
         http_post_string(url, body);
     }

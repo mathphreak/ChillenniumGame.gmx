@@ -27,8 +27,8 @@ if ds_map_find_value(async_load, "status") == 0 {
                     } else {
                         players[n,4] = "";
                     }
-                    if ds_map_exists(map, "saboteur") {
-                        players[n,5] = ds_map_find_value(map, "saboteur");
+                    if ds_map_exists(map, "messmaker") {
+                        players[n,5] = ds_map_find_value(map, "messmaker");
                     } else {
                         players[n,5] = false;
                     }

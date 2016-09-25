@@ -29,7 +29,7 @@
 playerTurn = 1;
 turns_elapsed = 0;
 //Random break chance
-break_chance = 0;
+mess_chance = 0;
 random_room = 0;
 choice_offered[0] = false;
 choice_offered[1] = false;
@@ -81,15 +81,15 @@ choice_offered[3] = false;
           <argument>
             <kind>1</kind>
             <string>players = net_getPlayers();
-var choice = "Fix"
+var choice = "Clean up"
 //if its player turn
 //determine whether current player is Sab
-// maybe also check if it's already broken/fixed
+// maybe also check if it's already messy/clean
 if(players[playerTurn, 5]){
-    choice = "Break"
+    choice = "Leave a mess"
 }
 else
-    choice = "Fix"
+    choice = "Clean up"
 
 var rooms = obj_shipData.rooms
     
@@ -152,9 +152,9 @@ if playerTurn + 1 == 4 &amp;&amp; !choice_offered[playerTurn]{
 
     
 //room status changes to player
-//attempt to take action (if fixed or not fixed)
+//attempt to take action (if clean or not clean)
 //if succeed, room changes
-//update total broken room state
+//update total messy room state
 //end turn, repeat
 
 //Player finished their turn
@@ -174,11 +174,11 @@ if(net_allPlayersReady()){
         var currentPlayerType = getPlayerWithNumber(i);
         var currentPlayer = instance_find(currentPlayerType, 0);
         var currentRoom = currentPlayer.currentRoom;
-        if(players[i, 3] == "Fix"){
-            obj_shipData.rooms[currentRoom-1,0] = "fixed"
+        if(players[i, 3] == "Clean up"){
+            obj_shipData.rooms[currentRoom-1,0] = "clean"
         }
-        else if(players[i,3] == "Break"){
-            obj_shipData.rooms[currentRoom-1,0] = "broken"
+        else if(players[i,3] == "Leave a mess"){
+            obj_shipData.rooms[currentRoom-1,0] = "messy"
         }
         else{
             if(players[i,3] == "Cockpit"){
@@ -292,17 +292,17 @@ if(net_allPlayersReady()){
 
 
 
-    //redraw ship health
-    //redraw broken rooms num
+    //redraw ship cleanliness
+    //redraw messy rooms num
     //make new random break room chance
         
     if(playerTurn == 0) {
         turns_elapsed++;
-        break_chance = irandom(10)
-        //random room broken
-        if(break_chance == 1){
+        mess_chance = irandom(10)
+        //random room messy
+        if(mess_chance == 1){
             random_room = irandom(5)
-            obj_shipData.rooms[random_room, 0] = "broken"
+            obj_shipData.rooms[random_room, 0] = "messy"
         }
         if(turns_elapsed == obj_shipData.turns_remaining){
             alarm[0] = 300
