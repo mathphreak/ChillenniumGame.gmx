@@ -34,30 +34,14 @@ turns_remaining = 10;
 for (var i =0; i&lt;6; i+=1){
     rooms[i,0] = "fixed"
 }
+rooms[0, 1] = "the Cockpit";
+rooms[1, 1] = "Weapons Storage";
+rooms[2, 1] = "the Medical Bay";
+rooms[3, 1] = "Food Supply";
+rooms[4, 1] = "Engine Room 1";
+rooms[5, 1] = "Engine Room 2";
 
-//No player can see into room to begin
-for (var i = 0; i&lt;6; i+=1){
-    switch(i){
-        case 0:
-            rooms[i, 1] = "the Cockpit";
-            break;
-        case 1:
-            rooms[i, 1] = "Weapons Storage";
-            break;
-        case 2:
-            rooms[i, 1] = "the Medical Bay";
-            break;
-        case 3:
-            rooms[i, 1] = "Food Supply";
-            break;
-        case 4:
-            rooms[i, 1] = "Engine Room 1";
-            break;
-        case 5:
-            rooms[i, 1] = "Engine Room 2";
-            break;
-    }
-}
+
 
 </string>
           </argument>
@@ -118,6 +102,17 @@ if(net_allPlayersReady()){
           <argument>
             <kind>1</kind>
             <string>draw_text(x,y,ship_health)
+
+var broken_number=0;
+for (var i=0; i&lt;array_height_2d(rooms); i+=1){
+    if(rooms[i,0] == "broken"){
+        broken_number ++
+    }
+}
+
+draw_text(x, y+20, broken_number)
+draw_text(x, y+40, obj_turnCycle.turns_elapsed)
+
 </string>
           </argument>
         </arguments>
