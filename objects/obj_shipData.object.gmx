@@ -85,7 +85,7 @@ if(doProcess){
     
     ship_cleanliness = clamp(ship_cleanliness, -1, 10);
     
-    if (ship_cleanliness &lt; 0) {
+    if (ship_cleanliness &lt;= 0) {
         room_goto(rm_lost_game);
     }
 }     

@@ -39,6 +39,9 @@ players[0,4] = '';
 players[0,5] = false;
 trust_ready = true;
 
+JOIN_URL = '';
+SHORTCODE = '';
+
 </string>
           </argument>
         </arguments>
@@ -189,6 +192,18 @@ if room == rm_lobby &amp;&amp; players[0,0] != '' {
             ready = "N";
         }
         draw_text(room_width / 2 + room_width / 3, 70 + 25 * i, ready);
+    }
+}
+
+if room == rm_lost_game || room == rm_won_game {
+    for (var i = 0; i &lt; array_height_2d(players); i++) {
+        draw_text(room_width / 3 - room_width / 4, 70 + 25 * i, players[i, 1]);
+        draw_text(room_width / 3, 70 + 25 * i, players[i, 4]);
+        var mess = '';
+        if (players[i, 5]) {
+            mess = 'Messmaker';
+        }
+        draw_text(room_width / 3 + room_width / 4, 70 + 25 * i, mess);
     }
 }
 
