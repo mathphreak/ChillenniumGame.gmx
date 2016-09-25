@@ -91,13 +91,13 @@
     <object>objects\obj_win_game</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_won_game</room>
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_howto</room>
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_about</room>
     <room>rooms\rm_lost_game</room>
+    <room>rooms\rm_won_game</room>
     <room>rooms\rm_cutscene</room>
   </rooms>
   <help>
