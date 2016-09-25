@@ -188,7 +188,7 @@ doProcess = false
                     // Objective Complete!
                     obj_shipData.objectives_completed++;
                     audio_play_sound(snd_ding,5,false);
-                    if (obj_shipData.objectives_completed &gt;= 10) {
+                    if (obj_shipData.objectives_completed &gt;= 3) {
                         // you win
                         room_goto(rm_won_game);
                     }

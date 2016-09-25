@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>//Initialize data
 //(these values will probbaly change)
-ship_cleanliness = 10;
+ship_cleanliness = 5;
 objectives_completed = 0;
-turns_remaining = 30;
+turns_remaining = 10;
 doProcess = false;
 old_messy_number = 0;
 
@@ -131,7 +131,7 @@ if(messy_number != old_messy_number)
 
 draw_text(x, y+40, "Rooms messy: " + string(messy_number))
 draw_text(x, y+80, "Turns left: " +string((turns_remaining -(obj_turnCycle.turns_elapsed))))
-draw_text(x, y+120, "Objectives completed: " +string(objectives_completed) + "/10")
+draw_text(x, y+120, "Objectives completed: " +string(objectives_completed) + "/3")
 
 </string>
           </argument>
