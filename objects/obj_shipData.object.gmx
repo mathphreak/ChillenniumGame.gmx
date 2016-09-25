@@ -68,7 +68,7 @@ for (var i = 0; i&lt;6; i+=1){
 //only every 4th turn
 
 if(net_allPlayersReady()){
-    for (var i =0; i&lt;5; i+=1){
+    for (var i =0; i&lt;6; i+=1){
         if(rooms[i,0] == "broken"){
             //temporary
             ship_health -= 1;
