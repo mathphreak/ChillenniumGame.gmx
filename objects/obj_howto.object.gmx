@@ -8,40 +8,20 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="5" enumb="32">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>222</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_next_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>click = mouse_check_button_pressed(mb_left);
-
-if(point_in_rectangle(mouse_x, mouse_y, room_width/2-175, room_height/2-50, room_width/2+175, room_height/2+10)) &amp;&amp; (click)
-{
-    room_goto(rm_howto);
-}
-
-if(point_in_rectangle(mouse_x, mouse_y, room_width/2-90, room_height/2+75, room_width/2+80, room_height/2+125)) &amp;&amp; (click)
-{
-    room_goto(rm_about);
-}
-
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>
