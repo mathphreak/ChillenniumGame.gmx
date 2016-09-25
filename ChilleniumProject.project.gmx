@@ -7,22 +7,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_warning</sound>
-    <sound>sound\snd_voting_music</sound>
-    <sound>sound\snd_Intro</sound>
-    <sound>sound\snd_LoopA</sound>
-    <sound>sound\snd_LoopBfromA</sound>
-    <sound>sound\snd_LoopB</sound>
-    <sound>sound\snd_LoopCfromB</sound>
-    <sound>sound\snd_LoopC</sound>
-    <sound>sound\snd_LoopDfromC</sound>
-    <sound>sound\snd_LoopD</sound>
-    <sound>sound\snd_LoopEfromD</sound>
-    <sound>sound\snd_LoopE</sound>
-    <sound>sound\snd_LoopFfromE</sound>
-    <sound>sound\snd_LoopF</sound>
-    <sound>sound\snd_LoopGfromF</sound>
-    <sound>sound\snd_LoopG</sound>
-    <sound>sound\snd_Outro</sound>
+    <sound>sound\snd_EWW_Theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\NetTestSprite</sprite>
